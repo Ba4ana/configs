@@ -8,7 +8,6 @@
 **/*
 
 !.gitignore
-!.bashrc
 !.gitconfig
 !.npmrc
 !.bash_aliases
