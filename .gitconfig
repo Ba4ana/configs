@@ -1,0 +1,18 @@
+[user]
+    name = Дмитрий Синцов
+    email = qxwwxp@gmail.com
+[alias]
+    co = checkout
+    ci = commit -m
+    st = status
+    br = branch
+    hist = log --graph --date=short --pretty='%h %ad | %s%d [%an]'
+    type = cat-file -t
+    dump = cat-file -p
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+[http]
+    postBuffer = 524288000
