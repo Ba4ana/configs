@@ -1,6 +1,6 @@
 alias update='sudo apt-get update'
 alias upd='update'
-alias upgrade='update && sudo apt-get upgrade'
+alias upgrade='sudo apt-get upgrade'
 alias upg='upgrade'
 alias search='apt-cache search'
 alias autoremove='sudo apt-get autoremove'
