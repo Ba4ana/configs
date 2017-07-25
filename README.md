@@ -4,7 +4,7 @@
 fileName=~/.bashrc
 searchString='bash_aliases'
 
-writeInFile {
+writeInFile() {
     echo 'if [ -f ~/.bash_aliases ]; then' >> $fileName
     echo '. ~/.bash_aliases' >> $fileName
     echo 'fi' >> $fileName
