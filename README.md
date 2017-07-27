@@ -4,10 +4,6 @@
 ```bash
 sudo add-apt-repository ppa:gnome3-team/gnome3
 ```
-####    Audio
-```bash
-sudo add-apt-repository ppa:ubuntu-audio-dev/alsa-daily
-```
 ####    Sublime Text 3
 ```bash
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
