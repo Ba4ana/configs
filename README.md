@@ -38,7 +38,7 @@ sudo add-apt-repository ppa:tualatrix/ppa
 
 #### All Applications in line
 ```bash
-sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak
+sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak compizconfig-settings-manager
 ```
 #### NVM (Node.js)
 ```bash
@@ -226,6 +226,10 @@ sudo apt-get install ubuntu-tweak
 #### VLC
 ```bash
 sudo apt install vlc
+```
+#### ccsm
+```bash
+sudo apt-get install compizconfig-settings-manager
 ```
 ####    Grub Repair
 ```bash
