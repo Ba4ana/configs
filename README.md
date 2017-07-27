@@ -1,52 +1,56 @@
 ## PPA
 
-###    Gnome Shell
+####    Gnome Shell
 ```bash
 sudo add-apt-repository ppa:gnome3-team/gnome3
 ```
-###    Audio
+####    Audio
 ```bash
 sudo add-apt-repository ppa:ubuntu-audio-dev/alsa-daily
 ```
-###    Sublime Text 3
+####    Sublime Text 3
 ```bash
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
 ```
-###   Telegram
+####   Telegram
 ```bash
 sudo add-apt-repository ppa:atareao/telegram
 /opt/telegram/Telegram
 ```
-###    numix-gtk-theme
+####    numix-gtk-theme
 ```bash
 sudo add-apt-repository ppa:numix/ppa
 ```
-###    Cinnamon
+####    Cinnamon
 ```bash
 sudo add-apt-repository ppa:embrosyn/cinnamon
 ```
-###    Indicator
+####    Indicator
 ```bash
 sudo add-apt-repository ppa:indicator-multiload/stable-daily
 ```
-###    grub customizer
+####    grub customizer
 ```bash
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer 
+```
+####    ubuntu-tweak
+```bash
+sudo add-apt-repository ppa:tualatrix/ppa
 ```
 ---
 ## APPS
 
-### All Applications in line
+#### All Applications in line
 ```bash
-sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full
+sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak
 ```
-### NVM (Node.js)
+#### NVM (Node.js)
 ```bash
 sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 nvm install <номер>
 npm i -g bower browser-sync mocha gulp forever jshint
 ```
-### Jekyll
+#### Jekyll
 ```bash
 sudo gem install jekyll bundler
 ```
@@ -55,17 +59,17 @@ sudo gem install jekyll bundler
 ## SETTINGS
 
 
-### on NumLock
+#### on NumLock
 ```bash
 sudo gedit /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
 ```
 `в конце файла прописать: greeter-setup-script=/usr/bin/numlockx on`
 
-### Add windows-1251 encoding
+#### Add windows-1251 encoding
 ```bash
 if [[ ! -n `grep 'windows-1251' ~/.profile` ]]; then echo 'export GST_ID3_TAG_ENCODING="windows-1251"' >> ~/.profile; fi
 ```
-### NVM (Node.js) Settings
+#### NVM (Node.js) Settings
 ```bash
 nvm list
 nvm use <номер>
@@ -75,7 +79,7 @@ remove
 nvm deactivate <номер>
 nvm uninstall <номер>
 ```
-### Add bash aliases
+#### Add bash aliases
 `Bash script`
 ```bash
 #!/bin/bash
@@ -99,7 +103,7 @@ else
     cat $fileName
 fi
 ```
-### Linux desktop managers
+#### Linux desktop managers
 * GNOME3
 ```bash
 sudo dpkg-reconfigure gdm
@@ -109,14 +113,14 @@ sudo dpkg-reconfigure gdm
 sudo dpkg-reconfigure lightdm
 ```
 
-### Plymouth theme
+#### Plymouth theme
 `/usr/share/plymouth`
 ```bash
 sudo update-alternatives --config default.plymouth
 sudo update-initramfs -u
 ```
 
-### Preload  
+#### Preload  
 
 Если вы хотите отредактировать настройки Preload откройте его конфигурацию данной командой:  
 `sudo gedit /etc/preload.conf`  
@@ -127,10 +131,10 @@ sudo update-initramfs -u
 ## LOCATIONS
 
 
-###     Variables of folders in /home (~)
+####     Variables of folders in /home (~)
 `~/.config/user-dirs.dirs`
 
-### Plymouth theme
+#### Plymouth theme
 `/usr/share/plymouth`
 ```bash
 sudo update-alternatives --config default.plymouth
@@ -141,85 +145,89 @@ sudo update-initramfs -u
 ## All Applications
 
 
-*   Sublime
+####   Sublime Text 3
 ```bash
 sudo apt-get install sublime-text-installer
 ```
-*   Git
+####   Git
 ```bash
 sudo apt-get install git
 ```
-*   Telegram
+####   Telegram
 ```bash
 sudo apt install telegram
 ```
-*   Gnome Shell
+####   Gnome Shell
 ```bash
 sudo apt-get install chrome-gnome-shell
 ```
-*    numix-gtk-theme
+####    numix-gtk-theme
 ```bash
 sudo apt-get install numix-gtk-theme numix-icon-theme numix-icon-theme-circle
 ```
-*    Alsamixer
+####    Alsamixer
 ```bash
 sudo apt-get install gnome-alsamixer
 ```
-*    Clipboard
+####    Clipboard
 ```bash
 sudo apt install xclip
 ```
-*    Cinnamon
+####    Cinnamon
 ```bash
 sudo apt install cinnamon blueberry
 ```
-*    Indicator
+####    Indicator
 ```bash
 sudo apt-get install indicator-multiload
 ```
-*    grub customizer
+####    grub customizer
 ```bash
 sudo apt-get install grub-customizer
 ```
-*    dconf-editor
+####    dconf-editor
 ```bash
 sudo apt install dconf-editor
 ```
-* cUrl
+#### cUrl
 ```bash
 sudo apt install curl
 ```
-*    NumLock
+####    NumLock
 ```bash
 sudo apt-get install numlockx
 ```
-* Preload
+#### Preload
 ```bash
 sudo apt-get install preload
 ```
-* Ruby
+#### Ruby
 ```bash
 sudo apt install ruby-full
 ```
-* Jekyll
+#### Jekyll
 ```bash
 sudo gem install jekyll bundler
 ```
-* Node.js
+#### Node.js
 ```bash
 sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 nvm install <номер>
 npm i -g bower browser-sync mocha gulp forever jshint
 ```
-* Gimp
+#### Gimp
 ```bash
 sudo apt install gimp
 ```
-* VLC
+#### ubuntu-tweak
+```bash
+sudo apt-get install ubuntu-tweak
+```
+#### VLC
 ```bash
 sudo apt install vlc
 ```
-*    Grub Repair
+####    Grub Repair
 ```bash
 sudo add-apt-repository ppa:yannubuntu/boot-repair
 sudo apt-get update
