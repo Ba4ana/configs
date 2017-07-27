@@ -117,7 +117,11 @@ sudo update-initramfs -u
 ```
 
 #### Preload  
-
+```bash
+sudo touch /var/lib/preload/preload.state
+sudo chmod 600 /var/lib/preload/preload.state
+sudo /etc/init.d/preload restart
+```
 Если вы хотите отредактировать настройки Preload откройте его конфигурацию данной командой:  
 `sudo gedit /etc/preload.conf`  
 Если нужно посмотреть логи демона воспользуйтесь командой ниже:  
