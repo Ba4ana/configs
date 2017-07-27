@@ -245,11 +245,14 @@ sudo apt-get install -y boot-repair && boot-repair
     * [x] jshint
 * [x] SublimeText
 * [x] Browser
+    * [x] Google Chrome
+    * [x] Opera
 * [x] Skype
 * [x] Koala
 * [x] TeamViewer
-* [x] Opera
 * [x] Gparted
 * [x] VirtualBox
 * [x] VLC
 * [x] Gimp
+* [x] Jekyll
+* [x] Unity Tweak Tool
