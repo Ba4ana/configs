@@ -1,5 +1,4 @@
-# PPA
----
+## PPA
 
 ###    Gnome Shell
 ```bash
@@ -35,8 +34,8 @@ sudo add-apt-repository ppa:indicator-multiload/stable-daily
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer 
 ```
 ---
-# APPS
----
+## APPS
+
 ### All Applications in line
 ```bash
 sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full
@@ -53,8 +52,8 @@ sudo gem install jekyll bundler
 ```
 
 ---
-# SETTINGS
----
+## SETTINGS
+
 
 ### on NumLock
 ```bash
@@ -125,8 +124,8 @@ sudo update-initramfs -u
 `sudo tail -f /var/log/preload.log`
 
 ---
-# LOCATIONS
----
+## LOCATIONS
+
 
 ###     Variables of folders in /home (~)
 `~/.config/user-dirs.dirs`
@@ -139,8 +138,8 @@ sudo update-initramfs -u
 ```
 
 ---
-# All Applications
----
+## All Applications
+
 
 *   Sublime
 ```bash
@@ -228,8 +227,8 @@ sudo apt-get install -y boot-repair && boot-repair
 ```
 
 ---
-# CheckList
----
+## CheckList
+
 * [x] Автомонтирование дисков
 * [x] Git
 * [x] GitKraken
