@@ -195,7 +195,7 @@ sudo apt-get install grub-customizer
 ```bash
 sudo apt install dconf-editor
 ```
-#### cUrl
+#### cURL
 ```bash
 sudo apt install curl
 ```
