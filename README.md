@@ -11,7 +11,6 @@ sudo add-apt-repository ppa:webupd8team/sublime-text-3
 ####   Telegram
 ```bash
 sudo add-apt-repository ppa:atareao/telegram
-/opt/telegram/Telegram
 ```
 ####    numix-gtk-theme
 ```bash
@@ -135,6 +134,8 @@ sudo /etc/init.d/preload restart
 ---
 ## LOCATIONS
 
+#### Telegram
+`/opt/telegram/Telegram`
 
 ####     Variables of folders in /home (~)
 `~/.config/user-dirs.dirs`
