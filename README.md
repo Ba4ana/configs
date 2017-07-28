@@ -20,7 +20,7 @@ sudo add-apt-repository ppa:numix/ppa
 ```bash
 sudo add-apt-repository ppa:embrosyn/cinnamon
 ```
-####    [Indicator](#indicatior-1)
+####    [Indicator](#indicator-1)
 ```bash
 sudo add-apt-repository ppa:indicator-multiload/stable-daily
 ```
