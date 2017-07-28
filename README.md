@@ -100,7 +100,6 @@ if [ -a $fileName ]; then
 else
     touch $fileName
     writeInFile
-    cat $fileName
 fi
 ```
 #### Linux desktop managers
