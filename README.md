@@ -59,6 +59,8 @@ sudo gem install jekyll bundler
 ---
 ## SETTINGS
 
+#### Samba add local user
+`sudo smbpasswd -a $USER`
 
 #### on NumLock
 ```bash
