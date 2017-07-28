@@ -33,6 +33,11 @@ sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 ```bash
 sudo add-apt-repository ppa:tualatrix/ppa
 ```
+####    Oracle Java
+```bash
+sudo add-apt-repository ppa:webupd8team/java
+```
+
 ---
 ## APPS
 
