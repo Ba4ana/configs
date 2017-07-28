@@ -40,7 +40,7 @@ sudo add-apt-repository ppa:webupd8team/java
 ---
 ## APPS
 
-#### All Applications in line
+#### [All Applications](#all-applications) in line
 ```bash
 sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak compizconfig-settings-manager oracle-java8-installer
 ```
