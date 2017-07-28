@@ -45,6 +45,7 @@ sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak compizconfig-settings-manager oracle-java8-installer
 ```
 #### NVM (Node.js)
+[Settings](#nvm-nodejs-settings)
 ```bash
 sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 nvm install <номер>
@@ -69,7 +70,7 @@ sudo gedit /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
 ```bash
 if [[ ! -n `grep 'windows-1251' ~/.profile` ]]; then echo 'export GST_ID3_TAG_ENCODING="windows-1251"' >> ~/.profile; fi
 ```
-#### NVM (Node.js) Settings
+#### [NVM (Node.js)](#nvm-nodejs) Settings
 ```bash
 nvm list
 nvm use <номер>
@@ -150,7 +151,7 @@ sudo update-initramfs -u
 ## All Applications
 
 
-####   Sublime Text 3
+####   [Sublime Text 3](#sublime-text-3)
 ```bash
 sudo apt-get install sublime-text-installer
 ```
@@ -158,15 +159,15 @@ sudo apt-get install sublime-text-installer
 ```bash
 sudo apt-get install git
 ```
-####   Telegram
+####   [Telegram](#telegram)
 ```bash
 sudo apt install telegram
 ```
-####   Gnome Shell
+####   [Gnome Shell](#gnome-shell)
 ```bash
 sudo apt-get install chrome-gnome-shell
 ```
-####    numix-gtk-theme
+####    [numix-gtk-theme](#numix-gtk-theme)
 ```bash
 sudo apt-get install numix-gtk-theme numix-icon-theme numix-icon-theme-circle
 ```
@@ -178,15 +179,15 @@ sudo apt-get install gnome-alsamixer
 ```bash
 sudo apt install xclip
 ```
-####    Cinnamon
+####    [Cinnamon](#cinnamon)
 ```bash
 sudo apt install cinnamon blueberry
 ```
-####    Indicator
+####    [Indicator](#indicator)
 ```bash
 sudo apt-get install indicator-multiload
 ```
-####    grub customizer
+####    [grub customizer](#grub-customizer)
 ```bash
 sudo apt-get install grub-customizer
 ```
@@ -224,7 +225,7 @@ npm i -g bower browser-sync mocha gulp forever jshint
 ```bash
 sudo apt install gimp
 ```
-#### ubuntu-tweak
+#### [ubuntu-tweak](#ubuntu-tweak)
 ```bash
 sudo apt-get install ubuntu-tweak
 ```
@@ -236,7 +237,7 @@ sudo apt install vlc
 ```bash
 sudo apt-get install compizconfig-settings-manager
 ```
-#### Oracle Java
+#### [Oracle Java](#oracle-java)
 ```bash
 sudo apt-get install oracle-java8-installer
 ```
