@@ -49,7 +49,7 @@ sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numi
 ```bash
 sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 nvm install <номер>
-npm i -g bower browser-sync mocha gulp forever jshint
+npm i -g bower browser-sync mocha gulp forever jshint pug-cli
 ```
 #### Jekyll
 ```bash
