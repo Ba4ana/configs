@@ -42,7 +42,7 @@ sudo add-apt-repository ppa:webupd8team/java
 
 #### [All Applications](#all-applications) in line
 ```bash
-sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak compizconfig-settings-manager oracle-java8-installer clemantine
+sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak compizconfig-settings-manager oracle-java8-installer clemantine filezilla
 ```
 #### NVM (Node.js)
 [Settings](#nvm-nodejs-settings)
@@ -246,6 +246,10 @@ sudo apt-get install oracle-java8-installer
 #### Clemantine Media Player
 ```bash
 sudo apt-get install clemantine
+```
+#### FileZilla FTP-client
+```bash
+sudo apt-get install filezilla
 ```
 ####    Grub Repair
 ```bash
