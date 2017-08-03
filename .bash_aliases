@@ -24,10 +24,6 @@ alias go='git checkout'
 alias gp='git push'
 alias gs='git st'
 alias gx='gitx --all'
-alias .='cd ..'
-alias ..='cd ../..'
-alias ...='cd ../../..'
-alias ....='cd ../../../..'
 alias x='exit'
 alias reboot='sudo reboot'
 alias bs='browser-sync start --server --no-notify --files'
@@ -40,6 +36,20 @@ alias cls='clear'
 alias ?='which'
 alias opera='opera -private'
 alias Google='lynx http://www.google.com/'
+alias rkhunter-run='sudo rkhunter -c --enable all --disable none'
+alias rkhunter-run-warning='rkhunter -c --enable all --disable none --rwo'
+
+
+man() {
+    env LESS_TERMCAP_mb=$'\E[01;31m' \
+    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
+    LESS_TERMCAP_me=$'\E[0m' \
+    LESS_TERMCAP_se=$'\E[0m' \
+    LESS_TERMCAP_so=$'\E[38;5;246m' \
+    LESS_TERMCAP_ue=$'\E[0m' \
+    LESS_TERMCAP_us=$'\E[04;38;5;146m' \
+    man "$@"
+}
 
 hello() {
     echo World
