@@ -20,6 +20,7 @@ alias gk='gitk --all&'
 alias gm='git merge'
 alias go='git checkout'
 alias gp='git push'
+alias gr='git remote'
 alias gs='git st'
 alias gx='gitx --all'
 alias x='exit'
@@ -99,7 +100,11 @@ function parse_git_dirty {
     fi
 }
 
-export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\033[38;05;223m\]\$(parse_git_branch)\[\033[00m\]\n\\$\[$(tput sgr0)\] "
+if [ ! `whoami` == 'root' ]; then
+    export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\033[38;05;223m\]\$(parse_git_branch)\[\033[00m\]\n\\$\[$(tput sgr0)\] "
+else
+    export PS1="\[\e[1;31m\][\u@\h \W]\n\\$\[$(tput sgr0)\] "
+fi
 
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
