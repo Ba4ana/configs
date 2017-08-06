@@ -55,7 +55,9 @@ upg() {
 
 config-upd() {
     location=`pwd`
+
     cd ~
+
     git add .
     if [[ ! $# -eq 0 ]]; then
         git commit -m "$*"
@@ -63,6 +65,16 @@ config-upd() {
         git commit -m 'update'
     fi
     git push origin master
+
+    cd "$location"
+}
+
+config-status() {
+    location=`pwd`
+    cd ~
+
+    git status
+    git diff
 
     cd "$location"
 }
