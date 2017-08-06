@@ -53,6 +53,17 @@ upg() {
     upgrade
 }
 
+config-upd() {
+    cd ~
+    git add .
+    if [[ ! $# -eq 0 ]]; then
+        git commit -m "$*"
+    else
+        git commit -m 'update'
+    fi
+    git push origin master
+}
+
 # get current branch in git repo
 function parse_git_branch() {
     BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
