@@ -136,24 +136,23 @@ newproj() {
         targetLocation="`pwd`/"
 
         if [[ ! $# -eq 0 ]]; then
-            installedTemplates=0
+            installedTemplate=""
             while [[ -n "$1" ]]; do
 
                 keys=$(echo $1 | grep ^-)
                 params=$(echo $keys | grep ^--)
 
                 if [[ ! -n $keys ]]; then                                           # Если аргумент (имя шаблона)
-                    if [[ ! $installedTemplates -eq 1 ]]; then
+                    if [[ ! -n $installedTemplate ]]; then
                         if [[ -d "$templatesLocation" ]]; then
                             cd "$templatesLocation"
 
                             if [[ -d "$1" ]]; then
                                 cd "$1"
                                 cp -rpu ./. "$targetLocation"
-                                installedTemplates=1
-                                echo 'Шаблон "'$1'" успешно установлен.'
+                                installedTemplate=$1
                             else
-                                installedTemplates=0
+                                installedTemplate=""
                                 echo 'Шаблон "'$1'" не найден.'
                             fi
 
@@ -177,9 +176,9 @@ newproj() {
                                 git='init'
                             fi
                         fi
-                        if [[ ! -n $(echo $keys | grep {gi}) ]]; then
-                            keys=$(echo $1 | sed 's/[gi-]//')
-                            echo 'Ключ(и) "'$keys'" не найден(ы).'
+                        if [[ ! -n $(echo $keys | grep [gi]) ]]; then
+                            keys=$(echo $1 | sed 's/[gi]//')
+                            echo 'Ключ(и) "'$keys'" не найден(ы). Используйте --help для получения справки.'
                         fi
                     else                                                            # Если параметр
                         if [[ -n $(echo $params | grep '\--b-.*') ]]; then
@@ -189,8 +188,7 @@ newproj() {
                         elif [[ -n $(echo $params | grep '\--help') ]]; then
                             newproj-help
                         else
-                            echo 'Параметр "'$1'" не найден.'
-                            newproj-help
+                            echo 'Параметр "'$1'" не найден. Используйте --help для получения справки.'
                         fi
                     fi
                 fi
@@ -213,6 +211,10 @@ newproj() {
         git init
         git add .
         git commit -m 'initial commit'
+    fi
+
+    if [[ -n $installedTemplate ]]; then
+        echo 'Шаблон "'$installedTemplate'" успешно установлен.'
     fi
 }
 
