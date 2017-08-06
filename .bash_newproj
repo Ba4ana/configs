@@ -1,0 +1,114 @@
+newproj() {
+    if [[ ! -z $templatesLocation ]]; then
+        targetLocation="`pwd`/"
+
+        if [[ ! $# -eq 0 ]]; then
+            installedTemplate=""
+            while [[ -n "$1" ]]; do
+
+                keys=$(echo $1 | grep ^-)
+                params=$(echo $keys | grep ^--)
+
+                if [[ ! -n $keys ]]; then                                           # Если аргумент (имя шаблона)
+                    if [[ ! -n $installedTemplate ]]; then
+                        if [[ -d "$templatesLocation" ]]; then
+                            cd "$templatesLocation"
+
+                            if [[ -d "$1" ]]; then
+                                cd "$1"
+                                cp -rpu ./. "$targetLocation"
+                                installedTemplate=$1
+                            else
+                                installedTemplate=""
+                                echo
+                                echo 'Шаблон "'$1'" не найден.'
+                                echo
+                            fi
+
+                            cd "$targetLocation"
+                        else
+                            echo 'Папка с шаблонами не найдена!'
+                            echo 'Запустите в командной строке:'
+                            echo 'gedit ~/.bashrc'
+                            echo 'Перепишите значение переменной templatesLocation.'
+                        fi
+                    else
+                        echo
+                        echo 'Можно устанавливать только 1 шаблон.'
+                        echo
+                    fi
+                else
+                    if [[ ! -n $params ]]; then                                     # Если ключ
+                        if [[ -n $(echo $keys | grep i) ]]; then
+                            npm install
+                        fi
+                        if [[ -n $(echo $keys | grep g) ]]; then
+                            if [[ ! $git == 'commit' ]]; then
+                                git='init'
+                            fi
+                        fi
+                        if [[ ! -n $(echo $keys | grep [gi]) ]]; then
+                            keys=$(echo $1 | sed 's/[gi]//')
+                            echo
+                            echo 'Ключ(и) "'$keys'" не найден(ы). Используйте --help для получения справки.'
+                            echo
+                        fi
+                    else                                                            # Если параметр
+                        if [[ -n $(echo $params | grep '\--b-.*') ]]; then
+                            bower install $(echo $params | sed 's/--b-//')
+                        elif [[ -n $(echo $params | grep '\--git-init') ]]; then
+                            git='commit'
+                        elif [[ -n $(echo $params | grep '\--help') ]]; then
+                            newproj-help
+                        else
+                            echo
+                            echo 'Параметр "'$1'" не найден. Используйте --help для получения справки.'
+                            echo
+                        fi
+                    fi
+                fi
+
+                shift
+            done
+        else
+            newproj-help
+        fi
+    else
+        echo 'Переменная templatesLocation не найдена!'
+        echo 'Перейдите в вашу папку с шаблонами и запустите команду:'
+        echo 'echo export templatesLocation=\"$(pwd)\" >> ~/.bashrc'
+        newproj-help
+    fi
+
+    if [[ -n $installedTemplate ]]; then
+        echo
+        echo 'Шаблон "'$installedTemplate'" успешно установлен.'
+    fi
+
+    if [[ $git == 'init' ]]; then
+        git init
+    elif [[ $git == 'commit' ]]; then
+        git init
+        git add .
+        git commit -m 'initial commit'
+        echo
+        echo 'Коммит "initial commit" выполнен.'
+    fi
+}
+
+newproj-help() {
+    echo 'Использование: newproj [ИМЯ ПАПКИ С ШАБЛОНОМ] -[КЛЮЧИ] --[ПАРАМЕТРЫ]
+
+       Пример:                   $ newproj pug -ig --b-bootstrap --git-init
+
+        Ключи:
+               -g              : $ git init
+               -i              : $ npm install
+    Параметры:
+              --b-<имя пакета> : Устанавливает пакет <имя пакета> из репозитория Bower. Выполняет команду:
+                                 $ bower install <имя пакета>
+              --git-init       : Инициализирует репозиторий. Выполняет команды:
+                                 $ git init
+                                 $ git add .
+                                 $ git commit -m "initial commit"'
+}
