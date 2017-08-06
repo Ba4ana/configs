@@ -148,10 +148,10 @@ newproj() {
                                 cd "$1"
                                 cp -rpu ./. "$targetLocation"
                                 installedTemplates=1
-                                echo 'Шаблон "'$1'" успешно установлен'
+                                echo 'Шаблон "'$1'" успешно установлен.'
                             else
                                 installedTemplates=0
-                                echo 'Шаблон "'$1'" не найден'
+                                echo 'Шаблон "'$1'" не найден.'
                             fi
 
                             cd "$targetLocation"
@@ -162,7 +162,7 @@ newproj() {
                             echo 'Перепишите значение переменной templatesLocation.'
                         fi
                     else
-                        echo 'Можно устанавливать только 1 шаблон'
+                        echo 'Можно устанавливать только 1 шаблон.'
                     fi
                 else
                     if [[ ! -n $params ]]; then                                     # Если ключ
@@ -174,6 +174,10 @@ newproj() {
                                 git='init'
                             fi
                         fi
+                        if [[ ! -n $(echo $keys | grep {gi}) ]]; then
+                            keys=$(echo $1 | sed 's/[gi-]//')
+                            echo 'Ключ(и) "'$keys'" не найден(ы).'
+                        fi
                     else                                                            # Если параметр
                         if [[ -n $(echo $params | grep '\--b-.*') ]]; then
                             bower install $(echo $params | sed 's/--b-//')
@@ -182,7 +186,7 @@ newproj() {
                         elif [[ -n $(echo $params | grep '\--help') ]]; then
                             newproj-help
                         else
-                            echo 'Параметр "'$1'" не найден'
+                            echo 'Параметр "'$1'" не найден.'
                             newproj-help
                         fi
                     fi
