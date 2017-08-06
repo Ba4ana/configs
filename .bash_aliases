@@ -118,12 +118,54 @@ man() {
 }
 
 newproj() {
-    if [[ $# -eq 0 ]]
-    then
-        echo 'Use --pug from create a new pug project'
-        pwd
+    if [[ ! -z $templatesLocation ]]; then
+        targetLocation="`pwd`/"
+
+        if [[ ! $# -eq 0 ]]; then
+            while [[ -n "$1" ]]; do
+                params=$(echo $1 | grep ^-)
+
+                if [[ ! -n $params ]]; then
+                    if [[ -d "$templatesLocation" ]]; then
+                        cd "$templatesLocation"
+
+                        if [[ -d "$1" ]]; then
+                            cd "$1"
+                            cp -rp ./* "$targetLocation"
+                        else
+                            echo Template \'"$1"\' not found
+                        fi
+
+                        cd "$targetLocation"
+                    else
+                        echo 'Папка с шаблонами не найдена!'
+                        echo 'Запустите в командной строке:'
+                        echo 'gedit ~/.bashrc'
+                        echo 'Перепишите значение переменной templatesLocation.'
+                    fi
+                else
+                    if [[ -n $(echo $params | grep i) ]]; then
+                        npm install
+                    fi
+                    if [[ -n $(echo $params | grep g) ]]; then
+                        git init
+                    fi
+                fi
+
+                shift
+            done
+        else
+            echo 'Использование: newproj [ИМЯ ПАПКИ С ШАБЛОНОМ] [КЛЮЧИ]'
+            echo
+            echo 'Пример :       newproj pug -ig'
+            echo 
+            echo 'Ключи:'
+            echo '      -g : git init'
+            echo '      -i : npm install'
+        fi
     else
-        echo $@
-        pwd
+        echo 'Переменная templatesLocation не найдена!'
+        echo 'Перейдите в вашу папку с шаблонами и запустите команду:'
+        echo 'echo export templatesLocation=\"$(pwd)\" >> ~/.bashrc'
     fi
 }
