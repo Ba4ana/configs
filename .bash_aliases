@@ -122,50 +122,95 @@ newproj() {
         targetLocation="`pwd`/"
 
         if [[ ! $# -eq 0 ]]; then
+            installedTemplates=0
             while [[ -n "$1" ]]; do
-                params=$(echo $1 | grep ^-)
 
-                if [[ ! -n $params ]]; then
-                    if [[ -d "$templatesLocation" ]]; then
-                        cd "$templatesLocation"
+                keys=$(echo $1 | grep ^-)
+                params=$(echo $keys | grep ^--)
 
-                        if [[ -d "$1" ]]; then
-                            cd "$1"
-                            cp -rp ./* "$targetLocation"
+                if [[ ! -n $keys ]]; then                                           # Если аргумент (имя шаблона)
+                    if [[ ! $installedTemplates -eq 1 ]]; then
+                        if [[ -d "$templatesLocation" ]]; then
+                            cd "$templatesLocation"
+
+                            if [[ -d "$1" ]]; then
+                                cd "$1"
+                                cp -rpu ./. "$targetLocation"
+                                installedTemplates=1
+                                echo 'Шаблон "'$1'" успешно установлен'
+                            else
+                                installedTemplates=0
+                                echo 'Шаблон "'$1'" не найден'
+                            fi
+
+                            cd "$targetLocation"
                         else
-                            echo Template \'"$1"\' not found
+                            echo 'Папка с шаблонами не найдена!'
+                            echo 'Запустите в командной строке:'
+                            echo 'gedit ~/.bashrc'
+                            echo 'Перепишите значение переменной templatesLocation.'
                         fi
-
-                        cd "$targetLocation"
                     else
-                        echo 'Папка с шаблонами не найдена!'
-                        echo 'Запустите в командной строке:'
-                        echo 'gedit ~/.bashrc'
-                        echo 'Перепишите значение переменной templatesLocation.'
+                        echo 'Можно устанавливать только 1 шаблон'
                     fi
                 else
-                    if [[ -n $(echo $params | grep i) ]]; then
-                        npm install
-                    fi
-                    if [[ -n $(echo $params | grep g) ]]; then
-                        git init
+                    if [[ ! -n $params ]]; then                                     # Если ключ
+                        if [[ -n $(echo $keys | grep i) ]]; then
+                            npm install
+                        fi
+                        if [[ -n $(echo $keys | grep g) ]]; then
+                            if [[ ! $git == 'commit' ]]; then
+                                git='init'
+                            fi
+                        fi
+                    else                                                            # Если параметр
+                        if [[ -n $(echo $params | grep '\--b-.*') ]]; then
+                            bower install $(echo $params | sed 's/--b-//')
+                        elif [[ -n $(echo $params | grep '\--git-init') ]]; then
+                            git='commit'
+                        elif [[ -n $(echo $params | grep '\--help') ]]; then
+                            newproj-help
+                        else
+                            echo 'Параметр "'$1'" не найден'
+                            newproj-help
+                        fi
                     fi
                 fi
 
                 shift
             done
         else
-            echo 'Использование: newproj [ИМЯ ПАПКИ С ШАБЛОНОМ] [КЛЮЧИ]'
-            echo
-            echo 'Пример :       newproj pug -ig'
-            echo 
-            echo 'Ключи:'
-            echo '      -g : git init'
-            echo '      -i : npm install'
+            newproj-help
         fi
     else
         echo 'Переменная templatesLocation не найдена!'
         echo 'Перейдите в вашу папку с шаблонами и запустите команду:'
         echo 'echo export templatesLocation=\"$(pwd)\" >> ~/.bashrc'
+        newproj-help
     fi
+
+    if [[ $git == 'init' ]]; then
+        git init
+    elif [[ $git == 'commit' ]]; then
+        git init
+        git add .
+        git commit -m 'initial commit'
+    fi
+}
+
+newproj-help() {
+    echo 'Использование: newproj [ИМЯ ПАПКИ С ШАБЛОНОМ] -[КЛЮЧИ] --[ПАРАМЕТРЫ]
+
+       Пример:                   $ newproj pug -ig --b-bootstrap --git-init
+
+        Ключи:
+               -g              : $ git init
+               -i              : $ npm install
+    Параметры:
+              --b-<имя пакета> : Устанавливает пакет <имя пакета> из репозитория Bower. Выполняет команду:
+                                 $ bower install <имя пакета>
+              --git-init       : Инициализирует репозиторий. Выполняет команды:
+                                 $ git init
+                                 $ git add .
+                                 $ git commit -m "initial commit"'
 }
