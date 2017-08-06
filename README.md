@@ -36,13 +36,17 @@ sudo add-apt-repository ppa:tualatrix/ppa
 ```bash
 sudo add-apt-repository ppa:webupd8team/java
 ```
+####    [SimpleScreenRecorder](#simplescreenrecorder-1)
+```bash
+sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+```
 
 ---
 ## APPS
 
 #### [All Applications](#all-applications) in line
 ```bash
-sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium
+sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium simplescreenrecorder simplescreenrecorder-lib:i386
 ```
 #### Nvidia Drivers
 ```bash
@@ -254,6 +258,10 @@ sudo apt-get install clemantine
 #### FileZilla FTP-client
 ```bash
 sudo apt-get install filezilla
+```
+#### [SimpleScreenRecorder](#simplescreenrecorder)
+```bash
+sudo apt-get install simplescreenrecorder simplescreenrecorder-lib:i386
 ```
 ####    Grub Repair
 ```bash
