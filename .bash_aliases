@@ -54,6 +54,7 @@ upg() {
 }
 
 config-upd() {
+    location=`pwd`
     cd ~
     git add .
     if [[ ! $# -eq 0 ]]; then
@@ -62,6 +63,8 @@ config-upd() {
         git commit -m 'update'
     fi
     git push origin master
+
+    cd "$location"
 }
 
 # get current branch in git repo
