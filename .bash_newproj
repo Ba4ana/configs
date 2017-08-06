@@ -28,7 +28,7 @@ newproj() {
                             cd "$targetLocation"
                         else
                             echo 'Папка с шаблонами не найдена!'
-                            echo 'Запустите в командной строке:'
+                            echo 'Выполните в командной строке:'
                             echo 'gedit ~/.bashrc'
                             echo 'Перепишите значение переменной templatesLocation.'
                         fi
@@ -75,7 +75,7 @@ newproj() {
         fi
     else
         echo 'Переменная templatesLocation не найдена!'
-        echo 'Перейдите в вашу папку с шаблонами и запустите команду:'
+        echo 'Перейдите в вашу папку с шаблонами и выполните команду:'
         echo 'echo export templatesLocation=\"$(pwd)\" >> ~/.bashrc'
         newproj-help
     fi
