@@ -46,7 +46,7 @@ sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
 
 #### [All Applications](#all-applications) in line
 ```bash
-sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium simplescreenrecorder simplescreenrecorder-lib:i386
+sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium simplescreenrecorder simplescreenrecorder-lib:i386 screenfetch
 ```
 #### Nvidia Drivers
 ```bash
