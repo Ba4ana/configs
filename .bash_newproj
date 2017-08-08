@@ -1,93 +1,47 @@
+# author: Uzvern (https://github.com/Uzvern/)
+# 
+# v 1.0.0
+# 
+# TODO:
+# 1. Возможность вывода/выбора шаблона (если введено несколько)
+# (try Array)
+
+
+E_NEWPROJ_TEMPLATE_VAR=10
+E_NEWPROJ_TEMPLATE_LOCATION=11
+E_NEWPROJ_TEMPLATE_NOT_FOUND=12
+E_NEWPROJ_TEMPLATE_ONCE=13
+
 newproj() {
-    if [[ ! -z $templatesLocation ]]; then
-        targetLocation="`pwd`/"
+    _newprojZero
+    _newprojCheckTemplate
+    answer=$?
 
-        if [[ ! $# -eq 0 ]]; then
-            installedTemplate=""
-            while [[ -n "$1" ]]; do
-
-                keys=$(echo $1 | grep ^-)
-                params=$(echo $keys | grep ^--)
-
-                if [[ ! -n $keys ]]; then                                           # Если аргумент (имя шаблона)
-                    if [[ ! -n $installedTemplate ]]; then
-                        if [[ -d "$templatesLocation" ]]; then
-                            cd "$templatesLocation"
-
-                            if [[ -d "$1" ]]; then
-                                cd "$1"
-                                cp -rpu ./. "$targetLocation"
-                                installedTemplate=$1
-                            else
-                                installedTemplate=""
-                                echo
-                                echo 'Шаблон "'$1'" не найден.'
-                                echo
-                            fi
-
-                            cd "$targetLocation"
-                        else
-                            echo 'Папка с шаблонами не найдена!'
-                            echo 'Выполните в командной строке:'
-                            echo 'gedit ~/.bashrc'
-                            echo 'Перепишите значение переменной templatesLocation.'
-                        fi
-                    else
-                        echo
-                        echo 'Можно устанавливать только 1 шаблон.'
-                        echo
-                    fi
-                else
-                    if [[ ! -n $params ]]; then                                     # Если ключ
-                        if [[ -n $(echo $keys | grep i) ]]; then
-                            npm install
-                        fi
-                        if [[ -n $(echo $keys | grep g) ]]; then
-                            if [[ ! $git == 'commit' ]]; then
-                                git='init'
-                            fi
-                        fi
-                        if [[ ! -n $(echo $keys | grep [gi]) ]]; then
-                            keys=$(echo $1 | sed 's/[gi]//')
-                            echo
-                            echo 'Ключ(и) "'$keys'" не найден(ы). Используйте --help для получения справки.'
-                            echo
-                        fi
-                    else                                                            # Если параметр
-                        if [[ -n $(echo $params | grep '\--b-.*') ]]; then
-                            bower install $(echo $params | sed 's/--b-//')
-                        elif [[ -n $(echo $params | grep '\--git-init') ]]; then
-                            git='commit'
-                        elif [[ -n $(echo $params | grep '\--help') ]]; then
-                            newproj-help
-                        else
-                            echo
-                            echo 'Параметр "'$1'" не найден. Используйте --help для получения справки.'
-                            echo
-                        fi
-                    fi
-                fi
-
-                shift
-            done
-        else
-            newproj-help
-        fi
-    else
-        echo 'Переменная templatesLocation не найдена!'
-        echo 'Перейдите в вашу папку с шаблонами и выполните команду:'
-        echo 'echo export templatesLocation=\"$(pwd)\" >> ~/.bashrc'
-        newproj-help
+    if [[ $# -eq 0 ]]; then                                             # If 0 arguments passed
+        _newprojShowHelp
     fi
 
-    if [[ -n $installedTemplate ]]; then
-        echo
-        echo 'Шаблон "'$installedTemplate'" успешно установлен.'
+    if [[ ! ${answer} -eq 0 ]]; then                                    # If any Error
+        _newprojErrors "$answer"
+        return 1
     fi
+
+    while [[ -n "${1}" ]]; do                                           # Run newproj parser
+        _newprojParse ${1}
+        shift
+    done
+
+    _newprojKeys
+
+    _newprojParams
+
+    _newprojShowMessages
 
     if [[ $git == 'init' ]]; then
+        echo
         git init
     elif [[ $git == 'commit' ]]; then
+        echo
         git init
         git add .
         git commit -m 'initial commit'
@@ -96,18 +50,167 @@ newproj() {
     fi
 }
 
-newproj-help() {
-    echo 'Использование: newproj [ИМЯ ПАПКИ С ШАБЛОНОМ] -[КЛЮЧИ] --[ПАРАМЕТРЫ]
+_newprojZero() {
+    installedTemplate=''
+    otherTemplates=''
 
-       Пример:                   $ newproj pug -ig --b-bootstrap --git-init
+    keys=''
+    errorKeys=''
+
+    bower=''
+
+    params=''
+    errorParams=''
+}
+
+_newprojCheckTemplate() {
+    if [[ -z $templatesLocation ]]; then                                # Check variable
+        return $E_NEWPROJ_TEMPLATE_VAR
+    fi
+
+    if [[ ! -d "$templatesLocation" ]]; then                            # Check exist directory with templates
+        return $E_NEWPROJ_TEMPLATE_LOCATION
+    fi
+
+    if [[ -n ${1} ]]; then                                              # Check exist template
+        if [[ ! -d "${templatesLocation}/${1}" ]]; then
+            return ${E_NEWPROJ_TEMPLATE_NOT_FOUND}
+        fi
+    fi
+}
+
+_newprojParse() {
+    if [[ -n `echo "${1}" | grep -e '^--'` ]]; then                     # If passed param (paste your params below)
+        if [[ -n $(echo ${1} | grep '\--b-.*') ]]; then                 # If bower components
+            bower="${bower}$(echo ${1} | sed 's/--b-//') "
+        elif [[ -n $(echo ${1} | grep '\--git-init') ]]; then           # If git param
+            git='commit'
+        elif [[ -n $(echo ${1} | grep '\--help') ]]; then               # If help param
+            params="${params}${1} "
+        else                                                            # Unknown param
+            if [[ ! -n ${errorParams} ]]; then
+                errorParams="${1}"
+            else
+                errorParams="${errorParams},${1}"
+            fi
+        fi
+    elif [[ -n `echo "${1}" | grep -e '^-'` ]]; then                    # If passed key (paste your keys below)
+        if [[ -n $(echo ${1} | grep i) ]]; then                         # -i key
+            keys="${keys}i;"
+        fi
+        if [[ -n $(echo ${1} | grep g) ]]; then                         #- g key
+            git='init'
+        fi
+        if [[ -n $(echo ${1} | grep [gi]) ]]; then                      # Unknown key
+            errorKeys="${errorKeys}$(echo ${1} | sed 's/[-gi]//g')"
+        fi
+    else
+        _newprojArgs ${1}                                               # If passed args (template name)
+    fi
+}
+
+_newprojArgs() {
+    _newprojCheckTemplate $1                                            # Check exist template
+    answer=$?
+    if [[ ! -n ${installedTemplate} ]]; then                            # Check template install or not
+        if [[ ${answer} -eq 0 ]]; then
+            installedTemplate="${1}"
+            cp -rpu "${templatesLocation}/${1}/." "$(pwd)";
+        else
+            _newprojErrors "$answer" "$1"                               # If template not exist
+        fi
+    else
+        if [[ ! -n ${otherTemplates} ]]; then                           # If install more one template
+            otherTemplates="${1}"
+        else
+            otherTemplates="${otherTemplates},${1}"
+        fi
+
+        _newprojErrors ${E_NEWPROJ_TEMPLATE_ONCE} ${1}
+    fi
+}
+
+_newprojKeys() {
+    if [[ -n $(echo ${keys} | grep i) ]]; then
+        npm install
+    fi
+}
+
+_newprojParams() {
+    if [[ -n ${bower} ]]; then
+        bower install ${bower}
+    fi
+    if [[ -n $(echo ${params} | grep -e '--help') ]]; then
+        _newprojShowHelp
+    fi
+}
+
+_newprojErrors() {
+    echo
+    echo 'Ошибка №:' ${1}
+    if [[ ${1} -eq ${E_NEWPROJ_TEMPLATE_VAR} ]]; then                   # Error 10
+        echo 'Переменная templatesLocation не найдена!'
+        echo 'Перейдите в вашу папку с шаблонами и выполните команду:'
+        echo 'echo export templatesLocation=\"$(pwd)\" >> ~/.bashrc'
+    elif [[ ${1} -eq ${E_NEWPROJ_TEMPLATE_LOCATION} ]]; then            # Error 11
+        echo 'Папка с шаблонами не найдена!'
+        echo
+        echo 'Возможные проблемы:'
+        echo 
+        echo '1. Выполните в командной строке:'
+        echo '$ gedit ~/.bashrc'
+        echo 'Проверьте правильность значение переменной templatesLocation.'
+        echo '2. Проверьте, что у вас примонтировано устройство с шаблонами.'
+    elif [[ ${1} -eq ${E_NEWPROJ_TEMPLATE_NOT_FOUND} ]]; then           # Error 12
+        echo 'Шаблон "'$2'" не найден.'
+    elif [[ ${1} -eq ${E_NEWPROJ_TEMPLATE_ONCE} ]]; then                # Error 13
+        echo 'Можно устанавливать только 1 шаблон.'
+        echo 'Шаблоны "'${2}'" не были установлены, т.к. до этого был установлен шаблон "'${installedTemplate}'".'
+    else
+        echo 'Неизвестная ошибка.'
+    fi
+}
+
+_newprojShowMessages() {
+    if [[ -n ${otherTemplates} ]]; then
+        echo
+        echo 'Шаблон "'${installedTemplate}'" установлен.'
+        echo 'Шаблоны "'${otherTemplates}'" не были установлены.'
+    elif [[ -n ${installedTemplate} ]]; then
+        echo
+        echo 'Шаблон "'${installedTemplate}'" установлен.'
+    fi
+
+    if [[ -n ${errorKeys} ]]; then
+        echo
+        echo 'Ключ(и) "-'${errorKeys}'" не найден(ы). Используйте --help для получения справки.'
+    fi
+
+    if [[ -n ${errorParams} ]]; then
+        echo
+        echo 'Параметр(ы) "-'${errorParams}'" не найден(ы). Используйте --help для получения справки.'
+    fi
+}
+
+_newprojShowHelp() {
+    echo \
+'newproj помогает быстро скопировать и настроить готовый шаблон.
+
+Использование: newproj [ИМЯ ПАПКИ С ШАБЛОНОМ] [-КЛЮЧИ] [--ПАРАМЕТРЫ]
+
+       Пример:                   $ newproj pug -i --b-bootstrap --git-init
 
         Ключи:
-               -g              : $ git init
+               -g              : Инициализирует пустой Git репозиторий. Выполняет команду:
+                                 $ git init
+
                -i              : $ npm install
     Параметры:
               --b-<имя пакета> : Устанавливает пакет <имя пакета> из репозитория Bower. Выполняет команду:
                                  $ bower install <имя пакета>
-              --git-init       : Инициализирует репозиторий. Выполняет команды:
+                                 
+              --git-init       : Инициализирует репозиторий и создает первый initial commit. (обнуляет значение ключа -g)
+                                 Выполняет команды:
                                  $ git init
                                  $ git add .
                                  $ git commit -m "initial commit"'
