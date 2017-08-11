@@ -22,8 +22,8 @@ newproj() {
     fi
 
     if [[ ! ${answer} -eq 0 ]]; then                                    # If any Error
-        _newprojErrors "$answer"
-        return 1
+        _newprojErrors "${answer}"
+        return ${answer}
     fi
 
     while [[ -n "${1}" ]]; do                                           # Run newproj parser
@@ -35,19 +35,9 @@ newproj() {
 
     _newprojParams
 
-    _newprojShowMessages
+    _newprojOthers
 
-    if [[ $git == 'init' ]]; then
-        echo
-        git init
-    elif [[ $git == 'commit' ]]; then
-        echo
-        git init
-        git add .
-        git commit -m 'initial commit'
-        echo
-        echo 'Коммит "initial commit" выполнен.'
-    fi
+    _newprojShowMessages
 }
 
 _newprojZero() {
@@ -57,10 +47,11 @@ _newprojZero() {
     keys=''
     errorKeys=''
 
-    bower=''
-
     params=''
     errorParams=''
+
+    bower=''
+    node=''
 }
 
 _newprojCheckTemplate() {
@@ -80,9 +71,11 @@ _newprojCheckTemplate() {
 }
 
 _newprojParse() {
-    if [[ -n `echo "${1}" | grep -e '^--'` ]]; then                     # If passed param (paste your params below)
+    if [[ -n $(echo "${1}" | grep -e '^--') ]]; then                    # If passed param (paste your params below)
         if [[ -n $(echo ${1} | grep '\--b-.*') ]]; then                 # If bower components
             bower="${bower}$(echo ${1} | sed 's/--b-//') "
+        elif [[ -n $(echo ${1} | grep '\--n-.*') ]]; then               # If NPM components
+            node="${node}$(echo ${1} | sed 's/--n-//') "
         elif [[ -n $(echo ${1} | grep '\--git-init') ]]; then           # If git param
             git='commit'
         elif [[ -n $(echo ${1} | grep '\--help') ]]; then               # If help param
@@ -94,12 +87,14 @@ _newprojParse() {
                 errorParams="${errorParams},${1}"
             fi
         fi
-    elif [[ -n `echo "${1}" | grep -e '^-'` ]]; then                    # If passed key (paste your keys below)
+    elif [[ -n $(echo "${1}" | grep -e '^-') ]]; then                   # If passed key (paste your keys below)
         if [[ -n $(echo ${1} | grep i) ]]; then                         # -i key
             keys="${keys}i;"
         fi
-        if [[ -n $(echo ${1} | grep g) ]]; then                         #- g key
-            git='init'
+        if [[ -n $(echo ${1} | grep g) ]]; then                         # -g key
+            if [[ ! ${git} == 'commit' ]]; then
+                git='init'
+            fi
         fi
         if [[ -n $(echo ${1} | grep [gi]) ]]; then                      # Unknown key
             errorKeys="${errorKeys}$(echo ${1} | sed 's/[-gi]//g')"
@@ -140,8 +135,27 @@ _newprojParams() {
     if [[ -n ${bower} ]]; then
         bower install ${bower}
     fi
+
+    if [[ -n ${node} ]]; then
+        npm install ${node}
+    fi
+
     if [[ -n $(echo ${params} | grep -e '--help') ]]; then
         _newprojShowHelp
+    fi
+}
+
+_newprojOthers() {
+    if [[ ${git} == 'init' ]]; then
+        echo
+        git init
+    elif [[ ${git} == 'commit' ]]; then
+        echo
+        git init
+        git add .
+        git commit -m 'initial commit'
+        echo
+        echo 'Коммит "initial commit" выполнен.'
     fi
 }
 
@@ -198,7 +212,12 @@ _newprojShowHelp() {
 
 Использование: newproj [ИМЯ ПАПКИ С ШАБЛОНОМ] [-КЛЮЧИ] [--ПАРАМЕТРЫ]
 
-       Пример:                   $ newproj pug -i --b-bootstrap --git-init
+       Пример:                   $ newproj pug -i --b-bootstrap --git-init --n-gulp --n-gulp-sass
+                                 Скопирует шаблон pug в текущую директорию. 
+                                 Установит все зависимости, указаные в файле package.json. 
+                                 Скачает и установит bootstrap со всеми зависимостями из репозитория Bower. 
+                                 Скачает и установит gulp, gulp-sass из репозитория NPM. 
+                                 Инициализирует пустой репозиторий Git и создаст первый коммит.
 
         Ключи:
                -g              : Инициализирует пустой Git репозиторий. Выполняет команду:
@@ -208,6 +227,9 @@ _newprojShowHelp() {
     Параметры:
               --b-<имя пакета> : Устанавливает пакет <имя пакета> из репозитория Bower. Выполняет команду:
                                  $ bower install <имя пакета>
+
+              --n-<имя пакета> : Устанавливает пакет <имя пакета> из репозитория NPM. Выполняет команду:
+                                 $ npm install <имя пакета>
                                  
               --git-init       : Инициализирует репозиторий и создает первый initial commit. (обнуляет значение ключа -g)
                                  Выполняет команды:
