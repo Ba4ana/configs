@@ -26,19 +26,15 @@ sudo add-apt-repository ppa:indicator-multiload/stable-daily
 ```
 ####    [grub customizer](#grub-customizer-1)
 ```bash
-sudo add-apt-repository ppa:danielrichter2007/grub-customizer 
-```
-####    [ubuntu-tweak](#ubuntu-tweak-1)
-```bash
-sudo add-apt-repository ppa:tualatrix/ppa
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 ```
 ####    [Oracle Java](#oracle-java-1)
 ```bash
 sudo add-apt-repository ppa:webupd8team/java
 ```
-####    [SimpleScreenRecorder](#simplescreenrecorder-1)
+####    [OBS-Studio](#obs-studio-1)
 ```bash
-sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+sudo add-apt-repository ppa:obsproject/obs-studio
 ```
 
 ---
@@ -46,11 +42,11 @@ sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
 
 #### [All Applications](#all-applications) in line
 ```bash
-sudo apt-get install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full ubuntu-tweak compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium simplescreenrecorder simplescreenrecorder-lib:i386 screenfetch
+sudo apt install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio unity-tweak-tool
 ```
 #### Nvidia Drivers
 ```bash
-sudo apt-get install nvidia-current
+sudo apt install nvidia-current
 ```
 #### NVM (Node.js)
 [Settings](#nvm-nodejs-settings)
@@ -147,7 +143,7 @@ sudo /etc/init.d/preload restart
 #### Telegram
 `/opt/telegram/Telegram`
 
-####     Variables of folders in /home (~)
+#### Variables of folders in /home (~)
 `~/.config/user-dirs.dirs`
 
 #### Plymouth theme
@@ -161,47 +157,47 @@ sudo update-initramfs -u
 ## All Applications
 
 
-####   [Sublime Text 3](#sublime-text-3)
+#### [Sublime Text 3](#sublime-text-3)
 ```bash
-sudo apt-get install sublime-text-installer
+sudo apt install sublime-text-installer
 ```
-####   Git
+#### Git
 ```bash
-sudo apt-get install git
+sudo apt install git
 ```
-####   [Telegram](#telegram)
+#### [Telegram](#telegram)
 ```bash
 sudo apt install telegram
 ```
-####   [Gnome Shell](#gnome-shell)
+#### [Gnome Shell](#gnome-shell)
 ```bash
-sudo apt-get install chrome-gnome-shell
+sudo apt install chrome-gnome-shell
 ```
-####    [numix-gtk-theme](#numix-gtk-theme)
+#### [numix-gtk-theme](#numix-gtk-theme)
 ```bash
-sudo apt-get install numix-gtk-theme numix-icon-theme numix-icon-theme-circle
+sudo apt install numix-gtk-theme numix-icon-theme numix-icon-theme-circle
 ```
-####    Alsamixer
+#### Alsamixer
 ```bash
-sudo apt-get install gnome-alsamixer
+sudo apt install gnome-alsamixer
 ```
-####    Clipboard
+#### Clipboard
 ```bash
 sudo apt install xclip
 ```
-####    [Cinnamon](#cinnamon)
+#### [Cinnamon](#cinnamon)
 ```bash
 sudo apt install cinnamon blueberry
 ```
-####    [Indicator](#indicator)
+#### [Indicator](#indicator)
 ```bash
-sudo apt-get install indicator-multiload
+sudo apt install indicator-multiload
 ```
-####    [grub customizer](#grub-customizer)
+#### [grub customizer](#grub-customizer)
 ```bash
-sudo apt-get install grub-customizer
+sudo apt install grub-customizer
 ```
-####    dconf-editor
+#### dconf-editor
 ```bash
 sudo apt install dconf-editor
 ```
@@ -209,13 +205,13 @@ sudo apt install dconf-editor
 ```bash
 sudo apt install curl
 ```
-####    NumLock
+#### NumLock
 ```bash
-sudo apt-get install numlockx
+sudo apt install numlockx
 ```
 #### Preload
 ```bash
-sudo apt-get install preload
+sudo apt install preload
 ```
 #### Ruby
 ```bash
@@ -235,39 +231,35 @@ npm i -g bower browser-sync mocha gulp forever jshint
 ```bash
 sudo apt install gimp
 ```
-#### [ubuntu-tweak](#ubuntu-tweak)
-```bash
-sudo apt-get install ubuntu-tweak
-```
 #### VLC
 ```bash
 sudo apt install vlc
 ```
 #### ccsm
 ```bash
-sudo apt-get install compizconfig-settings-manager
+sudo apt install compizconfig-settings-manager
 ```
 #### [Oracle Java](#oracle-java)
 ```bash
-sudo apt-get install oracle-java8-installer
+sudo apt install oracle-java8-installer
 ```
 #### Clemantine Media Player
 ```bash
-sudo apt-get install clemantine
+sudo apt install clemantine
 ```
 #### FileZilla FTP-client
 ```bash
-sudo apt-get install filezilla
+sudo apt install filezilla
 ```
-#### [SimpleScreenRecorder](#simplescreenrecorder)
+#### [OBS-Studio](#obs-studio)
 ```bash
-sudo apt-get install simplescreenrecorder simplescreenrecorder-lib:i386
+sudo apt install obs-studio
 ```
-####    Grub Repair
+#### Grub Repair
 ```bash
 sudo add-apt-repository ppa:yannubuntu/boot-repair
-sudo apt-get update
-sudo apt-get install -y boot-repair && boot-repair
+sudo apt update
+sudo apt install -y boot-repair && boot-repair
 ```
 
 ---
@@ -283,6 +275,7 @@ sudo apt-get install -y boot-repair && boot-repair
     * [x] gulp 
     * [x] forever 
     * [x] jshint
+    * [x] pug-cli
 * [x] SublimeText
 * [x] Browser
     * [x] Google Chrome
@@ -296,3 +289,4 @@ sudo apt-get install -y boot-repair && boot-repair
 * [x] Gimp
 * [x] Jekyll
 * [x] Unity Tweak Tool
+* [x] OBS-Studio
