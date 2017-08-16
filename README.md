@@ -1,10 +1,10 @@
 ## PPA
 
-####    [Gnome Shell](#gnome-shell-1)
+#### [Gnome Shell](#gnome-shell-1)
 ```bash
 sudo add-apt-repository ppa:gnome3-team/gnome3
 ```
-####    [Sublime Text 3](#sublime-text-3-1)
+#### [Sublime Text 3](#sublime-text-3-1)
 ```bash
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
 ```
@@ -12,27 +12,27 @@ sudo add-apt-repository ppa:webupd8team/sublime-text-3
 ```bash
 sudo add-apt-repository ppa:atareao/telegram
 ```
-####    [numix-gtk-theme](#numix-gtk-theme-1)
+#### [numix-gtk-theme](#numix-gtk-theme-1)
 ```bash
 sudo add-apt-repository ppa:numix/ppa
 ```
-####    [Cinnamon](#cinnamon-1)
+#### [Cinnamon](#cinnamon-1)
 ```bash
 sudo add-apt-repository ppa:embrosyn/cinnamon
 ```
-####    [Indicator](#indicator-1)
+#### [Indicator](#indicator-1)
 ```bash
 sudo add-apt-repository ppa:indicator-multiload/stable-daily
 ```
-####    [grub customizer](#grub-customizer-1)
+#### [grub customizer](#grub-customizer-1)
 ```bash
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 ```
-####    [Oracle Java](#oracle-java-1)
+#### [Oracle Java](#oracle-java-1)
 ```bash
 sudo add-apt-repository ppa:webupd8team/java
 ```
-####    [OBS-Studio](#obs-studio-1)
+#### [OBS-Studio](#obs-studio-1)
 ```bash
 sudo add-apt-repository ppa:obsproject/obs-studio
 ```
