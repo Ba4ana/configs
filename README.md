@@ -59,6 +59,17 @@ npm i -g bower browser-sync mocha gulp forever jshint pug-cli
 ```bash
 sudo gem install jekyll bundler
 ```
+#### Python 3.6.2
+```bash
+wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
+tar xvf Python-3.6.2.tar.xz
+cd Python-3.6.2/
+./configure
+sudo make altinstall
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
+sudo update-alternatives --config python3
+```
 
 ---
 ## SETTINGS
