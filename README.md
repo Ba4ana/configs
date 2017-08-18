@@ -74,6 +74,15 @@ sudo update-alternatives --config python3
 ---
 ## SETTINGS
 
+#### Git
+[Solved] Permission denied (publickey).
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+xclip -sel clip < ~/.ssh/id_rsa.pub
+```
+
 #### Samba add local user
 `sudo smbpasswd -a $USER`
 
