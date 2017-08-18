@@ -82,6 +82,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
+`Adding a new SSH key to your Git account`
 
 #### Samba add local user
 `sudo smbpasswd -a $USER`
