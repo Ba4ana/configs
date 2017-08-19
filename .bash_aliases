@@ -1,5 +1,7 @@
 alias update='sudo apt update'
 alias upd='sudo apt update'
+alias upgrade='sudo apt upgrade'
+alias upg='sudo apt upgrade'
 alias search='apt-cache search'
 alias autoremove='sudo apt autoremove'
 alias autoclean='sudo apt autoclean'
@@ -37,21 +39,6 @@ alias opera='opera -private'
 alias Google='lynx http://www.google.com/'
 alias rkhunter-run='sudo rkhunter -c --enable all --disable none'
 alias rkhunter-run-warning='rkhunter -c --enable all --disable none --rwo'
-
-upgrade() {
-    sudo apt upgrade
-    dpkg -l | grep ^ii | awk '{ print $2}' > Документы/myPackagesList.txt
-
-    # sudo dpkg --clear-selections
-    # sudo dpkg --set-selections < mylist.txt
-    # sudo apt dselect-upgrade
-    # or
-    # xargs < mylist.txt apt install -y
-}
-
-upg() {
-    upgrade
-}
 
 config-upd() {
     location=`pwd`
