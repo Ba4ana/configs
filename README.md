@@ -42,7 +42,7 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 
 #### [All Applications](#all-applications) in line
 ```bash
-sudo apt install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio unity-tweak-tool
+sudo apt install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio unity-tweak-tool wallch
 ```
 #### Nvidia Drivers
 ```bash
@@ -275,6 +275,10 @@ sudo apt install filezilla
 #### [OBS-Studio](#obs-studio)
 ```bash
 sudo apt install obs-studio
+```
+#### Wallpaper Change
+```bash
+sudo apt install wallch
 ```
 #### Grub Repair
 ```bash
