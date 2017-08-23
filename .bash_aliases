@@ -1,3 +1,6 @@
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias update='sudo apt update'
 alias upd='sudo apt update'
 alias upgrade='sudo apt upgrade'
