@@ -89,9 +89,9 @@ xclip -sel clip < ~/.ssh/id_rsa.pub
 
 #### on NumLock
 ```bash
-sudo gedit /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
+sudo -s
+echo "greeter-setup-script=/usr/bin/numlockx on" >> /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf & exit
 ```
-`в конце файла прописать: greeter-setup-script=/usr/bin/numlockx on`
 
 #### Add windows-1251 encoding
 ```bash
