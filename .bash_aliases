@@ -42,6 +42,7 @@ alias opera='opera -private'
 alias Google='lynx http://www.google.com/'
 alias rkhunter-run='sudo rkhunter -c --enable all --disable none'
 alias rkhunter-run-warning='rkhunter -c --enable all --disable none --rwo'
+alias py='subl -w ~/python.py & '
 
 config-upd() {
     location=`pwd`
