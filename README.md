@@ -4,10 +4,6 @@
 ```bash
 sudo add-apt-repository ppa:gnome3-team/gnome3
 ```
-#### [Sublime Text 3](#sublime-text-3-1)
-```bash
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
-```
 ####   [Telegram](#telegram-2)
 ```bash
 sudo add-apt-repository ppa:atareao/telegram
@@ -42,7 +38,7 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 
 #### [All Applications](#all-applications) in line
 ```bash
-sudo apt install sublime-text-installer git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio unity-tweak-tool wallch
+sudo apt install git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio unity-tweak-tool wallch
 ```
 #### Nvidia Drivers
 ```bash
@@ -178,9 +174,10 @@ sudo update-initramfs -u
 ## All Applications
 
 
-#### [Sublime Text 3](#sublime-text-3)
+#### [Sublime Text 3](https://www.sublimetext.com/docs/3/linux_repositories.html#apt)
 ```bash
-sudo apt install sublime-text-installer
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 ```
 #### Git
 ```bash
