@@ -186,7 +186,7 @@ sudo update-initramfs -u
 ## All Applications
 
 
-#### [Sublime Text 3](https://www.sublimetext.com/docs/3/linux_repositories.html#apt)
+#### [Sublime Text 3](#sublime-text-3)
 ```bash
 sudo apt install sublime-text
 ```
