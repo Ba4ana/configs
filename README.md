@@ -38,12 +38,22 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 
 #### [All Applications](#all-applications) in line
 ```bash
-sudo apt install git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio unity-tweak-tool wallch
+sudo apt install git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio unity-tweak-tool wallch gdebi
 ```
+
+#### [Sublime Text 3](https://www.sublimetext.com/docs/3/linux_repositories.html#apt)
+```bash
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
+```
+
 #### Nvidia Drivers
 ```bash
 sudo apt install nvidia-current
 ```
+
 #### NVM (Node.js)
 [Settings](#nvm-nodejs-settings)
 ```bash
@@ -51,10 +61,12 @@ sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.s
 nvm install <номер>
 npm i -g bower browser-sync mocha gulp forever jshint pug-cli
 ```
+
 #### Jekyll
 ```bash
 sudo gem install jekyll bundler
 ```
+
 #### Python 3.6.2
 ```bash
 wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
@@ -176,8 +188,7 @@ sudo update-initramfs -u
 
 #### [Sublime Text 3](https://www.sublimetext.com/docs/3/linux_repositories.html#apt)
 ```bash
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt install sublime-text
 ```
 #### Git
 ```bash
