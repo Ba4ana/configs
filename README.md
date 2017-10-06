@@ -2,35 +2,35 @@
 
 #### [Gnome Shell](#gnome-shell-1)
 ```bash
-sudo add-apt-repository ppa:gnome3-team/gnome3
+sudo add-apt-repository ppa:gnome3-team/gnome3 -y
 ```
 ####   [Telegram](#telegram-2)
 ```bash
-sudo add-apt-repository ppa:atareao/telegram
+sudo add-apt-repository ppa:atareao/telegram -y
 ```
 #### [numix-gtk-theme](#numix-gtk-theme-1)
 ```bash
-sudo add-apt-repository ppa:numix/ppa
+sudo add-apt-repository ppa:numix/ppa -y
 ```
 #### [Cinnamon](#cinnamon-1)
 ```bash
-sudo add-apt-repository ppa:embrosyn/cinnamon
+sudo add-apt-repository ppa:embrosyn/cinnamon -y
 ```
 #### [Indicator](#indicator-1)
 ```bash
-sudo add-apt-repository ppa:indicator-multiload/stable-daily
+sudo add-apt-repository ppa:indicator-multiload/stable-daily -y
 ```
 #### [grub customizer](#grub-customizer-1)
 ```bash
-sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 ```
 #### [Oracle Java](#oracle-java-1)
 ```bash
-sudo add-apt-repository ppa:webupd8team/java
+sudo add-apt-repository ppa:webupd8team/java -y
 ```
 #### [OBS-Studio](#obs-studio-1)
 ```bash
-sudo add-apt-repository ppa:obsproject/obs-studio
+sudo add-apt-repository ppa:obsproject/obs-studio -y
 ```
 
 ---
@@ -41,7 +41,8 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt install git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio unity-tweak-tool wallch gdebi
 ```
 
-#### [Sublime Text 3](https://www.sublimetext.com/docs/3/linux_repositories.html#apt)
+#### Sublime Text 3
+[official site](https://www.sublimetext.com/docs/3/linux_repositories.html#apt)
 ```bash
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
