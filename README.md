@@ -80,6 +80,10 @@ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
 sudo update-alternatives --config python3
 ```
 
+#### Docker
+[Install](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-docker-ce)  
+[non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
+
 ---
 ## SETTINGS
 
