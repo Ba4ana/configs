@@ -1,3 +1,41 @@
+## Menu
+* [PPA](#ppa)  
+
+    * [Gnome Shell](#gnome-shell)
+    * [Telegram](#telegram)
+    * [numix-gtk-theme](#numix-gtk-theme)
+    * [Cinnamon](#cinnamon)
+    * [Indicator](#indicator)
+    * [grub customizer](#grub-customizer)
+    * [Oracle Java](#oracle-java)
+    * [OBS-Studio](#obs-studio)  
+* [APPS](#apps)
+
+    * [All Applications In Line](#all-applications-in-line)
+    * [Sublime Text 3](#sublime-text-3)
+    * [Nvidia Drivers](#nvidia-drivers)
+    * [NVM (Node.js)](#nvm-nodejs)
+    * [Jekyll](#jekyll)
+    * [Python 3.6](#python-36)
+    * [Docker](#docker)  
+* [SETTINGS](#settings)
+
+    * [Git](#git)
+    * [Samba add local user](#samba-add-local-user)
+    * [on NumLock](#on-numlock)
+    * [Add windows-1251 encoding](#add-windows-1251-encoding)
+    * [NVM (Node.js) Settings](#nvm-nodejs-settings)
+    * [Add bash aliases](#add-bash-aliases)
+    * [Linux desktop managers](#linux-desktop-managers)
+    * [Plymouth theme](#plymouth-theme)
+    * [Preload](#preload)
+* [LOCATIONS](#locations)
+
+    * [Telegram](#telegram-1)
+    * [Variables of folders in /home (~)](#variables-of-folders-in-home-)
+    * [Plymouth theme](#plymouth-theme-1)
+* [All Applications](#all-applications)
+
 ## PPA
 
 #### [Gnome Shell](#gnome-shell-1)
@@ -68,7 +106,7 @@ npm i -g bower browser-sync mocha gulp forever jshint pug-cli
 sudo gem install jekyll bundler
 ```
 
-#### Python 3.6.2
+#### Python 3.6
 ```bash
 wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tar.xz
 tar xvf Python-3.6.3.tar.xz
