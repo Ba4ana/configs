@@ -15,6 +15,7 @@
     * [Sublime Text 3](#sublime-text-3)
     * [Nvidia Drivers](#nvidia-drivers)
     * [NVM (Node.js)](#nvm-nodejs)
+    * [NPM applications](#npm-applications)
     * [Jekyll](#jekyll)
     * [Python 3.6](#python-36)
     * [Docker](#docker)  
@@ -97,8 +98,12 @@ sudo apt install nvidia-current
 [Settings](#nvm-nodejs-settings)
 ```bash
 sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-nvm install <номер>
-npm i -g bower browser-sync mocha gulp forever jshint pug-cli
+nvm install 8
+```
+
+#### NPM applications 
+```bash
+npm i -g bower browser-sync mocha gulp forever jshint pug-cli less
 ```
 
 #### Jekyll
