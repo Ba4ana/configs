@@ -33,7 +33,7 @@
 * [LOCATIONS](#locations-)
 
     * [Telegram](#telegram-1-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [Variables of folders in /home (~)](#variables-of-folders-in-home-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Variables of folders in /home (~)](#variables-of-folders-in-home--) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Plymouth theme](#plymouth-theme-1-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
 * [All Applications](#all-applications-)
 
@@ -75,7 +75,7 @@ sudo add-apt-repository ppa:obsproject/obs-studio -y
 ```
 
 ---
-## APPS
+## APPS [⇑](#menu)
 
 #### [All Applications](#all-applications) in line [⇑](#menu)
 ```bash
