@@ -347,10 +347,10 @@ sudo apt install -y boot-repair && boot-repair
 ---
 ## CheckList [⇑](#menu)
 
-* [x] Автомонтирование дисков
-* [x] Git
-* [x] GitKraken
-* [x] Nodejs
+* [x] Автомонтирование дисков ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [x] Git ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [x] GitKraken ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [x] Nodejs ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [x] bower 
     * [x] browser-sync 
     * [x] mocha 
@@ -358,17 +358,17 @@ sudo apt install -y boot-repair && boot-repair
     * [x] forever 
     * [x] jshint
     * [x] pug-cli
-* [x] SublimeText
-* [x] Browser
+* [x] SublimeText ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [x] Browser ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [x] Google Chrome
     * [x] Opera
-* [x] Skype
-* [x] Koala
-* [x] TeamViewer
-* [x] Gparted
-* [x] VirtualBox
-* [x] VLC
-* [x] Gimp
-* [x] Jekyll
+* [x] Skype ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [x] Koala ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [x] TeamViewer ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [x] Gparted ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [x] VirtualBox ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [x] VLC ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [x] Gimp ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [x] Jekyll ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
 * [x] Unity Tweak Tool
-* [x] OBS-Studio
+* [x] OBS-Studio ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
