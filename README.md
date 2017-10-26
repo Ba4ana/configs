@@ -13,11 +13,11 @@
 
     * [All Applications In Line](#all-applications-in-line-)
     * [Sublime Text 3](#sublime-text-3-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [Nvidia Drivers](#nvidia-drivers-)
+    * [Nvidia Drivers](#nvidia-drivers-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [NVM (Node.js)](#nvm-nodejs-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [NPM applications](#npm-applications-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Jekyll](#jekyll-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [Python 3.6](#python-36-)
+    * [Python 3.6](#python-36-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Docker](#docker-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
 * [SETTINGS](#settings-)
 
