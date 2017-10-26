@@ -358,6 +358,7 @@ sudo apt install -y boot-repair && boot-repair
     * [x] forever 
     * [x] jshint
     * [x] pug-cli
+    * [x] less
 * [x] SublimeText ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
 * [x] Browser ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [x] Google Chrome
