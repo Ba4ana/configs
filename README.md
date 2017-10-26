@@ -2,72 +2,74 @@
 * [PPA](#ppa)  
 
     * [Gnome Shell](#gnome-shell)
-    * [Telegram](#telegram)
+    * [Telegram](#telegram) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [numix-gtk-theme](#numix-gtk-theme)
     * [Cinnamon](#cinnamon)
     * [Indicator](#indicator)
-    * [grub customizer](#grub-customizer)
-    * [Oracle Java](#oracle-java)
-    * [OBS-Studio](#obs-studio)  
+    * [grub customizer](#grub-customizer) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Oracle Java](#oracle-java) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [OBS-Studio](#obs-studio) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
 * [APPS](#apps)
 
     * [All Applications In Line](#all-applications-in-line)
-    * [Sublime Text 3](#sublime-text-3)
+    * [Sublime Text 3](#sublime-text-3) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Nvidia Drivers](#nvidia-drivers)
-    * [NVM (Node.js)](#nvm-nodejs)
-    * [NPM applications](#npm-applications)
-    * [Jekyll](#jekyll)
+    * [NVM (Node.js)](#nvm-nodejs) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [NPM applications](#npm-applications) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Jekyll](#jekyll) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Python 3.6](#python-36)
-    * [Docker](#docker)  
+    * [Docker](#docker) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
 * [SETTINGS](#settings)
 
-    * [Git](#git)
-    * [Samba add local user](#samba-add-local-user)
+    * [Git](#git) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Samba add local user](#samba-add-local-user) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [on NumLock](#on-numlock)
-    * [Add windows-1251 encoding](#add-windows-1251-encoding)
-    * [NVM (Node.js) Settings](#nvm-nodejs-settings)
+    * [Add windows-1251 encoding](#add-windows-1251-encoding) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [NVM (Node.js) Settings](#nvm-nodejs-settings) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Add bash aliases](#add-bash-aliases)
     * [Linux desktop managers](#linux-desktop-managers)
-    * [Plymouth theme](#plymouth-theme)
-    * [Preload](#preload)
+    * [Plymouth theme](#plymouth-theme) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Preload](#preload) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
 * [LOCATIONS](#locations)
 
-    * [Telegram](#telegram-1)
-    * [Variables of folders in /home (~)](#variables-of-folders-in-home-)
-    * [Plymouth theme](#plymouth-theme-1)
+    * [Telegram](#telegram-1) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Variables of folders in /home (~)](#variables-of-folders-in-home-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Plymouth theme](#plymouth-theme-1) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
 * [All Applications](#all-applications)
 
-## PPA
+* [CheckList](#checklist)
 
-#### [Gnome Shell](#gnome-shell-1)
+## PPA [⇑](#menu)
+
+#### [Gnome Shell](#gnome-shell-1) [⇑](#menu)
 ```bash
 sudo add-apt-repository ppa:gnome3-team/gnome3 -y
 ```
-####   [Telegram](#telegram-2)
+#### [Telegram](#telegram-2) [⇑](#menu)
 ```bash
 sudo add-apt-repository ppa:atareao/telegram -y
 ```
-#### [numix-gtk-theme](#numix-gtk-theme-1)
+#### [numix-gtk-theme](#numix-gtk-theme-1) [⇑](#menu)
 ```bash
 sudo add-apt-repository ppa:numix/ppa -y
 ```
-#### [Cinnamon](#cinnamon-1)
+#### [Cinnamon](#cinnamon-1) [⇑](#menu)
 ```bash
 sudo add-apt-repository ppa:embrosyn/cinnamon -y
 ```
-#### [Indicator](#indicator-1)
+#### [Indicator](#indicator-1) [⇑](#menu)
 ```bash
 sudo add-apt-repository ppa:indicator-multiload/stable-daily -y
 ```
-#### [grub customizer](#grub-customizer-1)
+#### [grub customizer](#grub-customizer-1) [⇑](#menu)
 ```bash
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 ```
-#### [Oracle Java](#oracle-java-1)
+#### [Oracle Java](#oracle-java-1) [⇑](#menu)
 ```bash
 sudo add-apt-repository ppa:webupd8team/java -y
 ```
-#### [OBS-Studio](#obs-studio-1)
+#### [OBS-Studio](#obs-studio-1) [⇑](#menu)
 ```bash
 sudo add-apt-repository ppa:obsproject/obs-studio -y
 ```
@@ -75,13 +77,13 @@ sudo add-apt-repository ppa:obsproject/obs-studio -y
 ---
 ## APPS
 
-#### [All Applications](#all-applications) in line
+#### [All Applications](#all-applications) in line [⇑](#menu)
 ```bash
 sudo apt install git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio unity-tweak-tool wallch gdebi
 ```
 
 #### Sublime Text 3
-[official site](https://www.sublimetext.com/docs/3/linux_repositories.html#apt)
+[official site](https://www.sublimetext.com/docs/3/linux_repositories.html#apt) [⇑](#menu)
 ```bash
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
@@ -89,29 +91,29 @@ sudo apt-get update
 sudo apt-get install sublime-text
 ```
 
-#### Nvidia Drivers
+#### Nvidia Drivers [⇑](#menu)
 ```bash
 sudo apt install nvidia-current
 ```
 
-#### NVM (Node.js)
+#### NVM (Node.js) [⇑](#menu)
 [Settings](#nvm-nodejs-settings)
 ```bash
 sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 nvm install 8
 ```
 
-#### NPM applications 
+#### NPM applications [⇑](#menu)
 ```bash
 npm i -g bower browser-sync mocha gulp forever jshint pug-cli less
 ```
 
-#### Jekyll
+#### Jekyll [⇑](#menu)
 ```bash
 sudo gem install jekyll bundler
 ```
 
-#### Python 3.6
+#### Python 3.6 [⇑](#menu)
 ```bash
 wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tar.xz
 tar xvf Python-3.6.3.tar.xz
@@ -123,14 +125,14 @@ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
 sudo update-alternatives --config python3
 ```
 
-#### Docker
+#### Docker [⇑](#menu)
 [Install](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-docker-ce)  
 [non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
 
 ---
-## SETTINGS
+## SETTINGS [⇑](#menu)
 
-#### Git
+#### Git [⇑](#menu)
 [Solved] Permission denied (publickey).
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -140,19 +142,19 @@ xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 `Adding a new SSH key to your Git account`
 
-#### Samba add local user
+#### Samba add local user [⇑](#menu)
 `sudo smbpasswd -a $USER`
 
-#### on NumLock
+#### on NumLock [⇑](#menu)
 ```bash
 echo "greeter-setup-script=/usr/bin/numlockx on" | sudo tee /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
 ```
 
-#### Add windows-1251 encoding
+#### Add windows-1251 encoding [⇑](#menu)
 ```bash
 if [[ ! -n `grep 'windows-1251' ~/.profile` ]]; then echo 'export GST_ID3_TAG_ENCODING="windows-1251"' >> ~/.profile; fi
 ```
-#### [NVM (Node.js)](#nvm-nodejs) Settings
+#### [NVM (Node.js)](#nvm-nodejs) Settings [⇑](#menu)
 ```bash
 nvm list
 nvm use <номер>
@@ -162,7 +164,7 @@ remove
 nvm deactivate <номер>
 nvm uninstall <номер>
 ```
-#### Add bash aliases
+#### Add bash aliases [⇑](#menu)
 `Bash script`
 ```bash
 #!/bin/bash
@@ -185,7 +187,7 @@ else
     writeInFile
 fi
 ```
-#### Linux desktop managers
+#### Linux desktop managers [⇑](#menu)
 * GNOME3
 ```bash
 sudo dpkg-reconfigure gdm
@@ -195,14 +197,14 @@ sudo dpkg-reconfigure gdm
 sudo dpkg-reconfigure lightdm
 ```
 
-#### Plymouth theme
+#### Plymouth theme [⇑](#menu)
 `/usr/share/plymouth`
 ```bash
 sudo update-alternatives --config default.plymouth
 sudo update-initramfs -u
 ```
 
-#### Preload  
+#### Preload [⇑](#menu)
 ```bash
 sudo touch /var/lib/preload/preload.state
 sudo chmod 600 /var/lib/preload/preload.state
@@ -214,15 +216,15 @@ sudo /etc/init.d/preload restart
 `sudo tail -f /var/log/preload.log`
 
 ---
-## LOCATIONS
+## LOCATIONS [⇑](#menu)
 
-#### Telegram
+#### Telegram [⇑](#menu)
 `/opt/telegram/Telegram`
 
-#### Variables of folders in /home (~)
+#### Variables of folders in /home (~) [⇑](#menu)
 `~/.config/user-dirs.dirs`
 
-#### Plymouth theme
+#### Plymouth theme [⇑](#menu)
 `/usr/share/plymouth`
 ```bash
 sudo update-alternatives --config default.plymouth
@@ -230,112 +232,112 @@ sudo update-initramfs -u
 ```
 
 ---
-## All Applications
+## All Applications [⇑](#menu)
 
 
-#### [Sublime Text 3](#sublime-text-3)
+#### [Sublime Text 3](#sublime-text-3) [⇑](#menu)
 ```bash
 sudo apt install sublime-text
 ```
-#### Git
+#### Git [⇑](#menu)
 ```bash
 sudo apt install git
 ```
-#### [Telegram](#telegram)
+#### [Telegram](#telegram) [⇑](#menu)
 ```bash
 sudo apt install telegram
 ```
-#### [Gnome Shell](#gnome-shell)
+#### [Gnome Shell](#gnome-shell) [⇑](#menu)
 ```bash
 sudo apt install chrome-gnome-shell
 ```
-#### [numix-gtk-theme](#numix-gtk-theme)
+#### [numix-gtk-theme](#numix-gtk-theme) [⇑](#menu)
 ```bash
 sudo apt install numix-gtk-theme numix-icon-theme numix-icon-theme-circle
 ```
-#### Alsamixer
+#### Alsamixer [⇑](#menu)
 ```bash
 sudo apt install gnome-alsamixer
 ```
-#### Clipboard
+#### Clipboard [⇑](#menu)
 ```bash
 sudo apt install xclip
 ```
-#### [Cinnamon](#cinnamon)
+#### [Cinnamon](#cinnamon) [⇑](#menu)
 ```bash
 sudo apt install cinnamon blueberry
 ```
-#### [Indicator](#indicator)
+#### [Indicator](#indicator) [⇑](#menu)
 ```bash
 sudo apt install indicator-multiload
 ```
-#### [grub customizer](#grub-customizer)
+#### [grub customizer](#grub-customizer) [⇑](#menu)
 ```bash
 sudo apt install grub-customizer
 ```
-#### dconf-editor
+#### dconf-editor [⇑](#menu)
 ```bash
 sudo apt install dconf-editor
 ```
-#### cURL
+#### cURL [⇑](#menu)
 ```bash
 sudo apt install curl
 ```
-#### NumLock
+#### NumLock [⇑](#menu)
 ```bash
 sudo apt install numlockx
 ```
-#### Preload
+#### Preload [⇑](#menu)
 ```bash
 sudo apt install preload
 ```
-#### Ruby
+#### Ruby [⇑](#menu)
 ```bash
 sudo apt install ruby-full
 ```
-#### Jekyll
+#### Jekyll [⇑](#menu)
 ```bash
 sudo gem install jekyll bundler
 ```
-#### Node.js
+#### Node.js [⇑](#menu)
 ```bash
 sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 nvm install <номер>
 npm i -g bower browser-sync mocha gulp forever jshint
 ```
-#### Gimp
+#### Gimp [⇑](#menu)
 ```bash
 sudo apt install gimp
 ```
-#### VLC
+#### VLC [⇑](#menu)
 ```bash
 sudo apt install vlc
 ```
-#### ccsm
+#### ccsm [⇑](#menu)
 ```bash
 sudo apt install compizconfig-settings-manager
 ```
-#### [Oracle Java](#oracle-java)
+#### [Oracle Java](#oracle-java) [⇑](#menu)
 ```bash
 sudo apt install oracle-java8-installer
 ```
-#### Clemantine Media Player
+#### Clemantine Media Player [⇑](#menu)
 ```bash
 sudo apt install clemantine
 ```
-#### FileZilla FTP-client
+#### FileZilla FTP-client [⇑](#menu)
 ```bash
 sudo apt install filezilla
 ```
-#### [OBS-Studio](#obs-studio)
+#### [OBS-Studio](#obs-studio) [⇑](#menu)
 ```bash
 sudo apt install obs-studio
 ```
-#### Wallpaper Change
+#### Wallpaper Change [⇑](#menu)
 ```bash
 sudo apt install wallch
 ```
-#### Grub Repair
+#### Grub Repair [⇑](#menu)
 ```bash
 sudo add-apt-repository ppa:yannubuntu/boot-repair
 sudo apt update
@@ -343,7 +345,7 @@ sudo apt install -y boot-repair && boot-repair
 ```
 
 ---
-## CheckList
+## CheckList [⇑](#menu)
 
 * [x] Автомонтирование дисков
 * [x] Git
