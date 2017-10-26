@@ -1,43 +1,43 @@
 ## Menu
-* [PPA](#ppa)  
+* [PPA](#ppa-)  
 
-    * [Gnome Shell](#gnome-shell)
-    * [Telegram](#telegram) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [numix-gtk-theme](#numix-gtk-theme)
-    * [Cinnamon](#cinnamon)
-    * [Indicator](#indicator)
-    * [grub customizer](#grub-customizer) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [Oracle Java](#oracle-java) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [OBS-Studio](#obs-studio) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-* [APPS](#apps)
+    * [Gnome Shell](#gnome-shell-)
+    * [Telegram](#telegram-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [numix-gtk-theme](#numix-gtk-theme-)
+    * [Cinnamon](#cinnamon-)
+    * [Indicator](#indicator-)
+    * [grub customizer](#grub-customizer-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Oracle Java](#oracle-java-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [OBS-Studio](#obs-studio-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [APPS](#apps-)
 
-    * [All Applications In Line](#all-applications-in-line)
-    * [Sublime Text 3](#sublime-text-3) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [Nvidia Drivers](#nvidia-drivers)
-    * [NVM (Node.js)](#nvm-nodejs) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [NPM applications](#npm-applications) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [Jekyll](#jekyll) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [Python 3.6](#python-36)
-    * [Docker](#docker) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-* [SETTINGS](#settings)
+    * [All Applications In Line](#all-applications-in-line-)
+    * [Sublime Text 3](#sublime-text-3-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Nvidia Drivers](#nvidia-drivers-)
+    * [NVM (Node.js)](#nvm-nodejs-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [NPM applications](#npm-applications-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Jekyll](#jekyll-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Python 3.6](#python-36-)
+    * [Docker](#docker-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [SETTINGS](#settings-)
 
-    * [Git](#git) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [Samba add local user](#samba-add-local-user) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [on NumLock](#on-numlock)
-    * [Add windows-1251 encoding](#add-windows-1251-encoding) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [NVM (Node.js) Settings](#nvm-nodejs-settings) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [Add bash aliases](#add-bash-aliases)
-    * [Linux desktop managers](#linux-desktop-managers)
-    * [Plymouth theme](#plymouth-theme) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [Preload](#preload) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-* [LOCATIONS](#locations)
+    * [Git](#git-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Samba add local user](#samba-add-local-user-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [on NumLock](#on-numlock-)
+    * [Add windows-1251 encoding](#add-windows-1251-encoding-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [NVM (Node.js) Settings](#nvm-nodejs-settings-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Add bash aliases](#add-bash-aliases-)
+    * [Linux desktop managers](#linux-desktop-managers-)
+    * [Plymouth theme](#plymouth-theme-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Preload](#preload-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [LOCATIONS](#locations-)
 
-    * [Telegram](#telegram-1) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Telegram](#telegram-1-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Variables of folders in /home (~)](#variables-of-folders-in-home-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-    * [Plymouth theme](#plymouth-theme-1) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
-* [All Applications](#all-applications)
+    * [Plymouth theme](#plymouth-theme-1-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+* [All Applications](#all-applications-)
 
-* [CheckList](#checklist)
+* [CheckList](#checklist-)
 
 ## PPA [⇑](#menu)
 
@@ -82,8 +82,8 @@ sudo add-apt-repository ppa:obsproject/obs-studio -y
 sudo apt install git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio unity-tweak-tool wallch gdebi
 ```
 
-#### Sublime Text 3
-[official site](https://www.sublimetext.com/docs/3/linux_repositories.html#apt) [⇑](#menu)
+#### Sublime Text 3 [⇑](#menu)
+[official site](https://www.sublimetext.com/docs/3/linux_repositories.html#apt)
 ```bash
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
