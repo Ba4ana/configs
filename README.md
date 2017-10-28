@@ -11,6 +11,7 @@
     * [OBS-Studio](#obs-studio-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
 * [APPS](#apps-)
 
+    * [All Applications for Gnome In Line](#all-applications-for-gnome-in-line-)
     * [All Applications In Line](#all-applications-in-line-)
     * [Sublime Text 3](#sublime-text-3-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Nvidia Drivers](#nvidia-drivers-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
@@ -33,6 +34,7 @@
 * [LOCATIONS](#locations-)
 
     * [Telegram](#telegram-1-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Gnome extensions](#gnome-extensions-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Variables of folders in /home (~)](#variables-of-folders-in-home--) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Plymouth theme](#plymouth-theme-1-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
 * [All Applications](#all-applications-)
@@ -77,6 +79,11 @@ sudo add-apt-repository ppa:obsproject/obs-studio -y
 ---
 ## APPS [⇑](#menu)
 
+#### [All Applications for Gnome](#all-applications) in line [⇑](#menu)
+```bash
+sudo apt install git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip grub-customizer dconf-editor curl vlc gimp preload ruby-full oracle-java8-installer filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio gnome-tweak-tool gdebi
+```
+
 #### [All Applications](#all-applications) in line [⇑](#menu)
 ```bash
 sudo apt install git telegram chrome-gnome-shell numix-gtk-theme numix-icon-theme numix-icon-theme-circle gnome-alsamixer xclip indicator-multiload grub-customizer dconf-editor curl vlc gimp numlockx preload ruby-full compizconfig-settings-manager oracle-java8-installer clementine filezilla chkrootkit rkhunter gparted rawtherapee stellarium screenfetch obs-studio unity-tweak-tool wallch gdebi
@@ -91,24 +98,24 @@ sudo apt-get update
 sudo apt-get install sublime-text
 ```
 
-#### Nvidia Drivers [⇑](#menu)
+#### Nvidia Drivers [⇑](#menu) 
 ```bash
 sudo apt install nvidia-current
 ```
 
-#### NVM (Node.js) [⇑](#menu)
+#### NVM (Node.js) [⇑](#menu) 
 [Settings](#nvm-nodejs-settings)
 ```bash
 sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 nvm install 8
 ```
 
-#### NPM applications [⇑](#menu)
+#### NPM applications [⇑](#menu) 
 ```bash
 npm i -g bower browser-sync mocha gulp forever jshint pug-cli less
 ```
 
-#### Jekyll [⇑](#menu)
+#### Jekyll [⇑](#menu) 
 ```bash
 sudo gem install jekyll bundler
 ```
@@ -125,14 +132,14 @@ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
 sudo update-alternatives --config python3
 ```
 
-#### Docker [⇑](#menu)
+#### Docker [⇑](#menu) 
 [Install](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-docker-ce)  
 [non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
 
 ---
 ## SETTINGS [⇑](#menu)
 
-#### Git [⇑](#menu)
+#### Git [⇑](#menu) 
 [Solved] Permission denied (publickey).
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -150,11 +157,11 @@ xclip -sel clip < ~/.ssh/id_rsa.pub
 echo "greeter-setup-script=/usr/bin/numlockx on" | sudo tee /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
 ```
 
-#### Add windows-1251 encoding [⇑](#menu)
+#### Add windows-1251 encoding [⇑](#menu) 
 ```bash
 if [[ ! -n `grep 'windows-1251' ~/.profile` ]]; then echo 'export GST_ID3_TAG_ENCODING="windows-1251"' >> ~/.profile; fi
 ```
-#### [NVM (Node.js)](#nvm-nodejs) Settings [⇑](#menu)
+#### [NVM (Node.js)](#nvm-nodejs) Settings [⇑](#menu) 
 ```bash
 nvm list
 nvm use <номер>
@@ -220,6 +227,9 @@ sudo /etc/init.d/preload restart
 
 #### Telegram [⇑](#menu)
 `/opt/telegram/Telegram`
+
+#### Gnome extensions [⇑](#menu) 
+`~/.local/share/gnome-shell`
 
 #### Variables of folders in /home (~) [⇑](#menu)
 `~/.config/user-dirs.dirs`
