@@ -34,7 +34,7 @@
     * [Telegram](#telegram--1)
     * [Gnome extensions](#gnome-extensions-)
     * [Variables of folders in /home (~)](#variables-of-folders-in-home--)
-    * [Plymouth theme](#plymouth-theme-1-)
+    * [Plymouth theme](#plymouth-theme--1)
     
 
 ## PPA [⇑](#menu)
@@ -99,7 +99,7 @@ sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 ---
 ## APPS [⇑](#menu)
 
-#### [All Applications](#all-applications) in line [⇑](#menu)
+#### All Applications in line [⇑](#menu)
 ```bash
 sudo apt install \
    chkrootkit \
