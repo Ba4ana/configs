@@ -33,7 +33,7 @@
     * [Preload](#preload-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
 * [LOCATIONS](#locations-)
 
-    * [Telegram](#telegram-1) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
+    * [Telegram](#telegram--1) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Gnome extensions](#gnome-extensions-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Variables of folders in /home (~)](#variables-of-folders-in-home--) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
     * [Plymouth theme](#plymouth-theme-1-) ![Gnome](https://extensions.gnome.org/static/images/favicon.b73b0c0e30d2.png)
