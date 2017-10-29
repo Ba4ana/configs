@@ -102,6 +102,7 @@ sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 #### All Applications in line [⇑](#menu)
 ```bash
 sudo apt install \
+   arc-theme \
    chkrootkit \
    chrome-gnome-shell \
    curl \
@@ -115,7 +116,6 @@ sudo apt install \
    gnome-tweak-tool \
    gparted \
    grub-customizer \
-   numix-gtk-theme \
    numix-icon-theme \
    numix-icon-theme-circle \
    obs-studio \
