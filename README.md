@@ -14,7 +14,7 @@
 
     * [All Applications In Line](#all-applications-in-line-)    
     * [NVM (Node.js)](#nvm-nodejs-)
-    * [Jekyll](#jekyll-)
+    * [Ruby apps](#ruby-apps-)
     * [Nvidia Drivers](#nvidia-drivers-)
     * [Grub Repair](#grub-repair-)
     
@@ -146,7 +146,7 @@ npm i -g \
       less \
 ```
 
-#### Jekyll [⇑](#menu) 
+#### Ruby apps [⇑](#menu) 
 ```bash
 sudo gem install \
       bundler \
