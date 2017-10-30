@@ -102,45 +102,56 @@ sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 #### All Applications in line [⇑](#menu)
 ```bash
 sudo apt install \
-   arc-theme \
-   chkrootkit \
-   chrome-gnome-shell \
-   curl \
-   dconf-editor \
-   docker-ce \
-   filezilla \
-   gdebi \
-   gimp \
-   git \
-   gnome-alsamixer \
-   gnome-tweak-tool \
-   gparted \
-   grub-customizer \
-   numix-icon-theme \
-   numix-icon-theme-circle \
-   obs-studio \
-   oracle-java8-installer \
-   preload \
-   rawtherapee \
-   rkhunter \
-   ruby-full \
-   screenfetch \
-   stellarium \
-   sublime-text \
-   telegram \
-   vlc \
-   xclip \
+      arc-theme \
+      chkrootkit \
+      chrome-gnome-shell \
+      curl \
+      dconf-editor \
+      docker-ce \
+      filezilla \
+      gdebi \
+      gimp \
+      git \
+      gnome-alsamixer \
+      gnome-tweak-tool \
+      gparted \
+      grub-customizer \
+      numix-icon-theme \
+      numix-icon-theme-circle \
+      obs-studio \
+      oracle-java8-installer \
+      preload \
+      rawtherapee \
+      rkhunter \
+      ruby-full \
+      screenfetch \
+      stellarium \
+      sublime-text \
+      telegram \
+      vlc \
+      xclip \
 ```
 
 #### NVM (Node.js) [⇑](#menu) 
 ```bash
 nvm install 8
-npm i -g bower browser-sync mocha gulp forever jshint pug-cli less
+npm i -g \
+      bower \
+      browser-sync \
+      mocha \
+      gulp \
+      forever \
+      jshint \
+      pug-cli \
+      less \
 ```
 
 #### Jekyll [⇑](#menu) 
 ```bash
-sudo gem install jekyll bundler
+sudo gem install \
+      bundler \
+      jekyll \
+      lolcat \
 ```
 
 #### Nvidia Drivers [⇑](#menu) 
