@@ -118,16 +118,18 @@ function parse_git_dirty {
 
 function parse_jobs() {
     RUN_JOBS=$(jobs | wc -l)
+    RUN_JOBS_NAMES=$(echo $(jobs -l | awk '{print $4}' | tr '\n' ' '))
     
     if [ ! "${RUN_JOBS}" == "0" ]; then
-        echo " (${RUN_JOBS})"
+        echo "
+jobs: ${RUN_JOBS} (${RUN_JOBS_NAMES})"
     else
         echo ""
     fi
 }
 
 if [ ! `whoami` == 'root' ]; then
-    export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]\[\e[1;31m\]\$(parse_jobs)\[\033[00m\]:\[\033[01;34m\]\w \[\033[38;05;223m\]\$(parse_git_branch)\n\\[\033[00m\]\$\[$(tput sgr0)\] "
+    export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]\[\033[00m\]:\[\033[01;34m\]\w \[\033[38;05;223m\]\$(parse_git_branch)\[\e[1;31m\]\$(parse_jobs)\n\\[\033[00m\]\$\[$(tput sgr0)\] "
 else
     export PS1="\[\e[1;31m\][\u@\h \W]\n\\$\[$(tput sgr0)\] "
 fi
