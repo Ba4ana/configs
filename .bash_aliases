@@ -118,7 +118,8 @@ function parse_git_dirty {
 
 function parse_jobs() {
     RUN_JOBS=$(jobs | wc -l)
-    RUN_JOBS_NAMES=$(echo $(jobs -l | awk '{print $4}' | tr '\n' ' '))
+
+    RUN_JOBS_NAMES=$(echo $(jobs -l | awk '{print $4}') | sed -e 's/ /; /g')
     
     if [ ! "${RUN_JOBS}" == "0" ]; then
         echo "
