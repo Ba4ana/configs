@@ -43,6 +43,20 @@ alias rkhunter-run='sudo rkhunter -c --enable all --disable none'
 alias rkhunter-run-warning='rkhunter -c --enable all --disable none --rwo'
 alias py='subl -w ~/python.py & '
 
+docker-rmi() {
+    # Remove all images but Regexp
+    if [[ ! $# -eq 0 ]]; then
+        docker rmi $(docker images | grep -v -E "${1}" | awk '{print $3}')
+    else
+        echo 'No arguments'
+    fi
+}
+
+docker-rm() {
+    # Remove all exited containers
+    docker rm $(docker ps -a | grep -i 'exited' | awk '{print $1}')
+}
+
 config-upd() {
     location=`pwd`
 
