@@ -52,6 +52,15 @@ docker-rmi() {
     fi
 }
 
+docker-rmi-named() {
+    # Remove all images named as Regexp
+    if [[ ! $# -eq 0 ]]; then
+        docker rmi $(docker images | grep -E "${1}" | awk '{print $3}')
+    else
+        echo 'No arguments'
+    fi
+}
+
 docker-rm() {
     # Remove all exited containers
     docker rm $(docker ps -a | grep -i 'exited' | awk '{print $1}')
