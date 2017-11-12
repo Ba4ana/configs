@@ -144,6 +144,7 @@ npm i -g \
       jshint \
       pug-cli \
       less \
+      create-react-app \
 ```
 
 #### Ruby apps [⇑](#menu) 
