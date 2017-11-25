@@ -120,6 +120,7 @@ sudo apt install \
       numix-icon-theme-circle \
       obs-studio \
       oracle-java8-installer \
+      pinta \
       preload \
       rawtherapee \
       rkhunter \
@@ -128,6 +129,7 @@ sudo apt install \
       stellarium \
       sublime-text \
       telegram \
+      virtualenv \
       vlc \
       xclip \
 ```
@@ -138,13 +140,14 @@ nvm install 8
 npm i -g \
       bower \
       browser-sync \
-      mocha \
-      gulp \
-      forever \
-      jshint \
-      pug-cli \
-      less \
       create-react-app \
+      eslint \
+      forever \
+      gulp \
+      jshint \
+      less \
+      mocha \
+      pug-cli \
 ```
 
 #### Ruby apps [⇑](#menu) 
